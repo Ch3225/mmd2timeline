@@ -87,7 +87,7 @@ namespace mmd2timeline
                     if (validBoneNames.TryGetValue(lowestBoneName, out lowestControlName))
                     {
                         // 当启用高跟并且最低的控制器是脚趾，进行高跟高度修正的计算
-                        if (lowestControlName.EndsWith("ToeControl")|| lowestControlName.EndsWith("FootControl"))
+                        if (lowestControlName.EndsWith("ToeControl") || lowestControlName.EndsWith("FootControl"))
                         {
                             return _HeelHeightAdjustJSON.val;
                         }

@@ -88,9 +88,9 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Atan2(2.0f * (ei - jk), 1 - 2.0f * (ii + jj));
-            result.y = (float) Math.Asin(2.0f * (ej + ik));
-            result.z = (float) Math.Atan2(2.0f * (ek - ij), 1 - 2.0f * (jj + kk));
+            result.x = (float)Math.Atan2(2.0f * (ei - jk), 1 - 2.0f * (ii + jj));
+            result.y = (float)Math.Asin(2.0f * (ej + ik));
+            result.z = (float)Math.Atan2(2.0f * (ek - ij), 1 - 2.0f * (jj + kk));
             return result;
         }
 
@@ -106,9 +106,9 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Atan2(2.0f * (ei + jk), 1 - 2.0f * (ii + kk));
-            result.y = (float) Math.Atan2(2.0f * (ej + ik), 1 - 2.0f * (jj + kk));
-            result.z = (float) Math.Asin(2.0f * (ek - ij));
+            result.x = (float)Math.Atan2(2.0f * (ei + jk), 1 - 2.0f * (ii + kk));
+            result.y = (float)Math.Atan2(2.0f * (ej + ik), 1 - 2.0f * (jj + kk));
+            result.z = (float)Math.Asin(2.0f * (ek - ij));
             return result;
         }
 
@@ -124,9 +124,9 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Asin(2.0f * (ei - jk));
-            result.y = (float) Math.Atan2(2.0f * (ej + ik), 1 - 2.0f * (ii + jj));
-            result.z = (float) Math.Atan2(2.0f * (ek + ij), 1 - 2.0f * (ii + kk));
+            result.x = (float)Math.Asin(2.0f * (ei - jk));
+            result.y = (float)Math.Atan2(2.0f * (ej + ik), 1 - 2.0f * (ii + jj));
+            result.z = (float)Math.Atan2(2.0f * (ek + ij), 1 - 2.0f * (ii + kk));
             return result;
         }
 
@@ -142,9 +142,9 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Atan2(2.0f * (ei - jk), 1 - 2.0f * (ii + kk));
-            result.y = (float) Math.Atan2(2.0f * (ej - ik), 1 - 2.0f * (jj + kk));
-            result.z = (float) Math.Asin(2.0f * (ek + ij));
+            result.x = (float)Math.Atan2(2.0f * (ei - jk), 1 - 2.0f * (ii + kk));
+            result.y = (float)Math.Atan2(2.0f * (ej - ik), 1 - 2.0f * (jj + kk));
+            result.z = (float)Math.Asin(2.0f * (ek + ij));
             return result;
         }
 
@@ -160,9 +160,9 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Asin(2.0f * (ei + jk));
-            result.y = (float) Math.Atan2(2.0f * (ej - ik), 1 - 2.0f * (ii + jj));
-            result.z = (float) Math.Atan2(2.0f * (ek - ij), 1 - 2.0f * (ii + kk));
+            result.x = (float)Math.Asin(2.0f * (ei + jk));
+            result.y = (float)Math.Atan2(2.0f * (ej - ik), 1 - 2.0f * (ii + jj));
+            result.z = (float)Math.Atan2(2.0f * (ek - ij), 1 - 2.0f * (ii + kk));
             return result;
         }
 
@@ -178,94 +178,100 @@ namespace LibMMD.Util
             var ik = quaternion.x * quaternion.z;
             var jk = quaternion.y * quaternion.z;
             Vector3 result;
-            result.x = (float) Math.Atan2(2.0f * (ei + jk), 1 - 2.0f * (ii + jj));
-            result.y = (float) Math.Asin(2.0f * (ej - ik));
-            result.z = (float) Math.Atan2(2.0f * (ek + ij), 1 - 2.0f * (jj + kk));
+            result.x = (float)Math.Atan2(2.0f * (ei + jk), 1 - 2.0f * (ii + jj));
+            result.y = (float)Math.Asin(2.0f * (ej - ik));
+            result.z = (float)Math.Atan2(2.0f * (ek + ij), 1 - 2.0f * (jj + kk));
             return result;
         }
-        
-        public static Quaternion XyzToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+
+        public static Quaternion XyzToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz-sx*sy*sz);
-            result.x = (float) (sx*cy*cz+cx*sy*sz);
-            result.y = (float) (cx*sy*cz-sx*cy*sz);
-            result.z = (float) (sx*sy*cz+cx*cy*sz);
+            result.w = (float)(cx * cy * cz - sx * sy * sz);
+            result.x = (float)(sx * cy * cz + cx * sy * sz);
+            result.y = (float)(cx * sy * cz - sx * cy * sz);
+            result.z = (float)(sx * sy * cz + cx * cy * sz);
             return result;
         }
-        public static Quaternion XzyToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+        public static Quaternion XzyToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz+sx*sy*sz);
-            result.x = (float) (sx*cy*cz-cx*sy*sz);
-            result.y = (float) (cx*sy*cz-sx*cy*sz);
-            result.z = (float) (cx*cy*sz+sx*sy*cz);
+            result.w = (float)(cx * cy * cz + sx * sy * sz);
+            result.x = (float)(sx * cy * cz - cx * sy * sz);
+            result.y = (float)(cx * sy * cz - sx * cy * sz);
+            result.z = (float)(cx * cy * sz + sx * sy * cz);
             return result;
         }
-        public static Quaternion YxzToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+        public static Quaternion YxzToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz+sx*sy*sz);
-            result.x = (float) (sx*cy*cz+cx*sy*sz);
-            result.y = (float) (cx*sy*cz-sx*cy*sz);
-            result.z = (float) (cx*cy*sz-sx*sy*cz);
+            result.w = (float)(cx * cy * cz + sx * sy * sz);
+            result.x = (float)(sx * cy * cz + cx * sy * sz);
+            result.y = (float)(cx * sy * cz - sx * cy * sz);
+            result.z = (float)(cx * cy * sz - sx * sy * cz);
             return result;
         }
-        public static Quaternion YzxToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+        public static Quaternion YzxToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz-sx*sy*sz);
-            result.x = (float) (sx*cy*cz+cx*sy*sz);
-            result.y = (float) (cx*sy*cz+sx*cy*sz);
-            result.z = (float) (cx*cy*sz-sx*sy*cz);
+            result.w = (float)(cx * cy * cz - sx * sy * sz);
+            result.x = (float)(sx * cy * cz + cx * sy * sz);
+            result.y = (float)(cx * sy * cz + sx * cy * sz);
+            result.z = (float)(cx * cy * sz - sx * sy * cz);
             return result;
         }
-        public static Quaternion ZxyToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+        public static Quaternion ZxyToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz-sx*sy*sz);
-            result.x = (float) (sx*cy*cz-cx*sy*sz);
-            result.y = (float) (cx*sy*cz+sx*cy*sz);
-            result.z = (float) (cx*cy*sz+sx*sy*cz);
+            result.w = (float)(cx * cy * cz - sx * sy * sz);
+            result.x = (float)(sx * cy * cz - cx * sy * sz);
+            result.y = (float)(cx * sy * cz + sx * cy * sz);
+            result.z = (float)(cx * cy * sz + sx * sy * cz);
             return result;
         }
-        public static Quaternion ZYXToQuaternion(Vector3 euler) {
-            var cx = Math.Cos(euler.x*0.5f);
-            var sx = Math.Sin(euler.x*0.5f);
-            var cy = Math.Cos(euler.y*0.5f);
-            var sy = Math.Sin(euler.y*0.5f);
-            var cz = Math.Cos(euler.z*0.5f);
-            var sz = Math.Sin(euler.z*0.5f);
+        public static Quaternion ZYXToQuaternion(Vector3 euler)
+        {
+            var cx = Math.Cos(euler.x * 0.5f);
+            var sx = Math.Sin(euler.x * 0.5f);
+            var cy = Math.Cos(euler.y * 0.5f);
+            var sy = Math.Sin(euler.y * 0.5f);
+            var cz = Math.Cos(euler.z * 0.5f);
+            var sz = Math.Sin(euler.z * 0.5f);
             Quaternion result;
-            result.w = (float) (cx*cy*cz+sx*sy*sz);
-            result.x = (float) (sx*cy*cz-cx*sy*sz);
-            result.y = (float) (cx*sy*cz+sx*cy*sz);
-            result.z = (float) (cx*cy*sz-sx*sy*cz);
+            result.w = (float)(cx * cy * cz + sx * sy * sz);
+            result.x = (float)(sx * cy * cz - cx * sy * sz);
+            result.y = (float)(cx * sy * cz + sx * cy * sz);
+            result.z = (float)(cx * cy * sz - sx * sy * cz);
             return result;
         }
 
@@ -288,7 +294,7 @@ namespace LibMMD.Util
         //    bullet.M43 = unity.m23;
         //    bullet.M44 = unity.m33;
         //}
-        
+
         //public static void BulletMatrixToUnityMatrix(Matrix bullet, ref Matrix4x4 unity)
         //{
         //    unity.m00 =bullet.M11;

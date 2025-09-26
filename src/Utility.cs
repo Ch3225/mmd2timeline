@@ -17,7 +17,7 @@ namespace mmd2timeline
                 }
             }
         }
-        public static  Quaternion quat = new Quaternion(0, 1, 0, 0);
+        public static Quaternion quat = new Quaternion(0, 1, 0, 0);
 
         public static void ResetHandControl(HandControl c)
         {
@@ -59,25 +59,25 @@ namespace mmd2timeline
         {
             Transform target = freeController.transform;
 
-            TimelineFrameJson x = new TimelineFrameJson(time, target.localPosition.x,"3");
+            TimelineFrameJson x = new TimelineFrameJson(time, target.localPosition.x, "3");
             json.X.Add(x);
 
-            TimelineFrameJson y = new TimelineFrameJson(time, target.localPosition.y,"3");
+            TimelineFrameJson y = new TimelineFrameJson(time, target.localPosition.y, "3");
             json.Y.Add(y);
 
-            TimelineFrameJson z = new TimelineFrameJson(time, target.localPosition.z,"3");
+            TimelineFrameJson z = new TimelineFrameJson(time, target.localPosition.z, "3");
             json.Z.Add(z);
 
-            TimelineFrameJson rx = new TimelineFrameJson(time, target.localRotation.x,"3");
+            TimelineFrameJson rx = new TimelineFrameJson(time, target.localRotation.x, "3");
             json.RotX.Add(rx);
 
-            TimelineFrameJson ry = new TimelineFrameJson(time, target.localRotation.y,"3");
+            TimelineFrameJson ry = new TimelineFrameJson(time, target.localRotation.y, "3");
             json.RotY.Add(ry);
 
-            TimelineFrameJson rz = new TimelineFrameJson(time, target.localRotation.z,"3");
+            TimelineFrameJson rz = new TimelineFrameJson(time, target.localRotation.z, "3");
             json.RotZ.Add(rz);
 
-            TimelineFrameJson rw = new TimelineFrameJson(time, target.localRotation.w,"3");
+            TimelineFrameJson rw = new TimelineFrameJson(time, target.localRotation.w, "3");
             json.RotW.Add(rw);
         }
 

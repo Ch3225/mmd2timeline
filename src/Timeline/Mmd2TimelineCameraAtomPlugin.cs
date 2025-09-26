@@ -35,7 +35,7 @@ namespace mmd2timeline
         CameraControl m_CameraControl;
         public override void Init()
         {
-            if(containingAtom.type!= "WindowCamera")
+            if (containingAtom.type != "WindowCamera")
             {
                 CreateHeader("Only used on WindowCamera", false, Color.red);
                 return;
@@ -64,7 +64,7 @@ namespace mmd2timeline
 
                 startTime = new JSONStorableFloat("Start Time", 0, SetStartTime, 0, 10, true, true);
                 var slider = CreateSlider(startTime, true);
-                if(slider!=null)
+                if (slider != null)
                     slider.quickButtonsEnabled = false;
 
                 endTime = new JSONStorableFloat("End Time", 0, SetEndTime, 0, 10, true, true);
@@ -151,7 +151,7 @@ namespace mmd2timeline
             int lastFrame = m_MmdCamera._cameraMotion.KeyFrames[m_MmdCamera._cameraMotion.KeyFrames.Count - 1].Key;
 
             Debug.Log("lastFrame " + lastFrame);
-            endTime.max= (float)((double)lastFrame / 30);
+            endTime.max = (float)((double)lastFrame / 30);
             endTime.val = endTime.max;
             startTime.max = endTime.max;
 
@@ -210,7 +210,7 @@ namespace mmd2timeline
                     break;
                 }
             }
-            for(int i = list.Count - 1; i >= 0; i--)
+            for (int i = list.Count - 1; i >= 0; i--)
             {
                 int frame = list[i].Key;
                 float time = (float)frame / 30;
@@ -225,7 +225,7 @@ namespace mmd2timeline
             Debug.Log("endFrame " + endFrame);
 
             HashSet<int> keyFrames = new HashSet<int>();
-            foreach(var item in m_MmdCamera._cameraMotion.KeyFrames)
+            foreach (var item in m_MmdCamera._cameraMotion.KeyFrames)
             {
                 if (item.Key >= startFrame && item.Key <= endFrame)
                 {
@@ -236,7 +236,7 @@ namespace mmd2timeline
 
             for (int i = startFrame; i <= endFrame; i++)
             {
-                if(sampleRateChooser.val!= "EveryFrame")
+                if (sampleRateChooser.val != "EveryFrame")
                 {
                     if (!keyFrames.Contains(i)) continue;
                 }
@@ -247,7 +247,7 @@ namespace mmd2timeline
                 if (cameraPose != null)
                 {
                     //fov
-                    TimelineFrameJson fovRecord = new TimelineFrameJson(relativeTime,cameraPose.Fov, "3");
+                    TimelineFrameJson fovRecord = new TimelineFrameJson(relativeTime, cameraPose.Fov, "3");
                     fovJson.Value.Add(fovRecord);
 
                     m_MmdCamera.transform.localPosition = cameraPose.Position;// / 10;
@@ -312,7 +312,7 @@ namespace mmd2timeline
             fileBrowserUI.ActivateFileNameField();
         }
 
-        string GuessType(List<KeyValuePair<int, CameraKeyframe>> list,int currentFrame,ref int nextFrame)
+        string GuessType(List<KeyValuePair<int, CameraKeyframe>> list, int currentFrame, ref int nextFrame)
         {
             int maxFrame = list[list.Count - 1].Key;
             string type = "3";
@@ -358,29 +358,29 @@ namespace mmd2timeline
         }
         private const string _saveExt = "json";
         private const string _saveFolder = "Saves";
-        void RecordController(float time, FreeControllerV3 freeController, TimelineControlJson json,string type)
+        void RecordController(float time, FreeControllerV3 freeController, TimelineControlJson json, string type)
         {
             Transform target = freeController.transform;
 
             TimelineFrameJson x = new TimelineFrameJson(time, target.localPosition.x, type);
             json.X.Add(x);
 
-            TimelineFrameJson y = new TimelineFrameJson(time, target.localPosition.y,type);
+            TimelineFrameJson y = new TimelineFrameJson(time, target.localPosition.y, type);
             json.Y.Add(y);
 
-            TimelineFrameJson z = new TimelineFrameJson(time, target.localPosition.z,type);
+            TimelineFrameJson z = new TimelineFrameJson(time, target.localPosition.z, type);
             json.Z.Add(z);
 
-            TimelineFrameJson rx = new TimelineFrameJson(time, target.localRotation.x,type);
+            TimelineFrameJson rx = new TimelineFrameJson(time, target.localRotation.x, type);
             json.RotX.Add(rx);
 
             TimelineFrameJson ry = new TimelineFrameJson(time, target.localRotation.y, type);
             json.RotY.Add(ry);
 
-            TimelineFrameJson rz = new TimelineFrameJson(time, target.localRotation.z,type);
+            TimelineFrameJson rz = new TimelineFrameJson(time, target.localRotation.z, type);
             json.RotZ.Add(rz);
 
-            TimelineFrameJson rw = new TimelineFrameJson(time, target.localRotation.w,type);
+            TimelineFrameJson rw = new TimelineFrameJson(time, target.localRotation.w, type);
             json.RotW.Add(rw);
         }
 

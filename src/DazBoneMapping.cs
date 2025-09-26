@@ -19,7 +19,7 @@ namespace mmd2timeline
             return result;
         }
 
-        static void MatchNode(Atom atom, Transform child,string childBoneName,string parentBoneName,Transform target)
+        static void MatchNode(Atom atom, Transform child, string childBoneName, string parentBoneName, Transform target)
         {
             Transform parentBone = SearchObjName(target, parentBoneName);
             if (parentBoneName == "Genesis2Female")
@@ -27,18 +27,18 @@ namespace mmd2timeline
                 parentBone = atom.mainController.transform;
             }
             Transform childBone = SearchObjName(target, childBoneName);
-            float dis2Parent = Vector3.Distance(parentBone.position, childBone.position)*10;
+            float dis2Parent = Vector3.Distance(parentBone.position, childBone.position) * 10;
 
             Transform parent = child.parent;
-            float diff = Vector3.Distance(child.position, parent.position)- dis2Parent;
+            float diff = Vector3.Distance(child.position, parent.position) - dis2Parent;
 
-            var dir = (parent.position-child.position).normalized;
+            var dir = (parent.position - child.position).normalized;
             child.position += dir * diff;
         }
         static void MatchNode2(Atom atom, Transform child, Transform another, string childBoneName, string parentBoneName, Transform target)
         {
             Transform parentBone = SearchObjName(target, parentBoneName);
-            if(parentBoneName== "Genesis2Female")
+            if (parentBoneName == "Genesis2Female")
             {
                 parentBone = atom.mainController.transform;
             }
@@ -51,7 +51,7 @@ namespace mmd2timeline
             var dir = (parent.position - child.position).normalized;
             child.position += dir * diff;
         }
-        static void MatchNode3(Atom atom, Transform child, string childBoneName, string parentBoneName,float ratio, Transform target)
+        static void MatchNode3(Atom atom, Transform child, string childBoneName, string parentBoneName, float ratio, Transform target)
         {
             Transform parentBone = SearchObjName(target, parentBoneName);
             if (parentBoneName == "Genesis2Female")
@@ -60,14 +60,14 @@ namespace mmd2timeline
             }
 
             Transform childBone = SearchObjName(target, childBoneName);
-            float dis2Parent = Vector3.Distance(parentBone.position, childBone.position) * 10*ratio;
+            float dis2Parent = Vector3.Distance(parentBone.position, childBone.position) * 10 * ratio;
 
             Transform parent = child.parent;
             float diff = Vector3.Distance(child.position, parent.position) - dis2Parent;
             var dir = (parent.position - child.position).normalized;
             child.position += dir * diff;
         }
-        static void FollowNode( Transform node, Transform other)
+        static void FollowNode(Transform node, Transform other)
         {
             node.position = other.position;
         }
@@ -90,27 +90,27 @@ namespace mmd2timeline
             //lFoot lShin
             //rToe rFoot
             //lToe lFoot
-            MatchNode2(atom,mmdBones["腰"], mmdBones["全ての親"], "hip", "Genesis2Female",target);
+            MatchNode2(atom, mmdBones["腰"], mmdBones["全ての親"], "hip", "Genesis2Female", target);
             MatchNode(atom, mmdBones["下半身"], "pelvis", "hip", target);
 
-            MatchNode(atom,mmdBones["左足"], "lThigh", "pelvis", target);
-            MatchNode(atom,mmdBones["左ひざ"], "lShin", "lThigh", target);
-            MatchNode(atom,mmdBones["左足首"], "lFoot", "lShin", target);
+            MatchNode(atom, mmdBones["左足"], "lThigh", "pelvis", target);
+            MatchNode(atom, mmdBones["左ひざ"], "lShin", "lThigh", target);
+            MatchNode(atom, mmdBones["左足首"], "lFoot", "lShin", target);
             MatchNode(atom, mmdBones["左つま先"], "lToe", "lFoot", target);
 
-            MatchNode(atom,mmdBones["右足"], "rThigh", "pelvis", target);
-            MatchNode(atom,mmdBones["右ひざ"], "rShin", "rThigh", target);
-            MatchNode(atom,mmdBones["右足首"], "rFoot", "rShin", target);
+            MatchNode(atom, mmdBones["右足"], "rThigh", "pelvis", target);
+            MatchNode(atom, mmdBones["右ひざ"], "rShin", "rThigh", target);
+            MatchNode(atom, mmdBones["右足首"], "rFoot", "rShin", target);
             MatchNode(atom, mmdBones["右つま先"], "rToe", "rFoot", target);
 
-            MatchNode(atom,mmdBones["左足D"], "lThigh", "pelvis", target);
-            MatchNode(atom,mmdBones["左ひざD"], "lShin", "lThigh", target);
-            MatchNode(atom,mmdBones["左足首D"], "lFoot", "lShin", target);
-            MatchNode(atom,mmdBones["左足先EX"], "lToe", "lFoot", target);
+            MatchNode(atom, mmdBones["左足D"], "lThigh", "pelvis", target);
+            MatchNode(atom, mmdBones["左ひざD"], "lShin", "lThigh", target);
+            MatchNode(atom, mmdBones["左足首D"], "lFoot", "lShin", target);
+            MatchNode(atom, mmdBones["左足先EX"], "lToe", "lFoot", target);
 
-            MatchNode(atom,mmdBones["右足D"], "rThigh", "pelvis", target);
-            MatchNode(atom,mmdBones["右ひざD"], "rShin", "rThigh", target);
-            MatchNode(atom,mmdBones["右足首D"], "rFoot", "rShin", target);
+            MatchNode(atom, mmdBones["右足D"], "rThigh", "pelvis", target);
+            MatchNode(atom, mmdBones["右ひざD"], "rShin", "rThigh", target);
+            MatchNode(atom, mmdBones["右足首D"], "rFoot", "rShin", target);
             MatchNode(atom, mmdBones["右足先EX"], "rToe", "rFoot", target);
 
             FollowNode(mmdBones["左足IK親"], mmdBones["左足"]);
@@ -126,10 +126,10 @@ namespace mmd2timeline
             //chest abdomen2
             //neck chest
             //head neck
-            MatchNode(atom,mmdBones["上半身"], "abdomen", "hip", target);
-            MatchNode(atom,mmdBones["上半身2"], "abdomen2", "abdomen", target);
-            MatchNode(atom,mmdBones["上半身3"], "chest", "abdomen2", target);
-            MatchNode(atom,mmdBones["首"], "neck", "chest", target);
+            MatchNode(atom, mmdBones["上半身"], "abdomen", "hip", target);
+            MatchNode(atom, mmdBones["上半身2"], "abdomen2", "abdomen", target);
+            MatchNode(atom, mmdBones["上半身3"], "chest", "abdomen2", target);
+            MatchNode(atom, mmdBones["首"], "neck", "chest", target);
             MatchNode(atom, mmdBones["頭"], "head", "neck", target);
 
             //lCollar chest

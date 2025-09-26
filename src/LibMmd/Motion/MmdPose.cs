@@ -13,7 +13,7 @@ namespace LibMMD.Motion
             get { return _bonePoses; }
             set { _bonePoses = value; }
         }
-        
+
 
     }
 }

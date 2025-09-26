@@ -77,23 +77,23 @@ namespace mmd2timeline
         public byte[] ReadBytes(int count)
         {
             byte[] val = new byte[count];
-            for(int i= 0; i< count; i++)
+            for (int i = 0; i < count; i++)
             {
                 val[i] = buffer[Offset++];
             }
             return val;
         }
 
-//        public BufferRegion ReadBytes(int count)
-//        {
-//#if DEBUG
-//            if (Offset < 0 || Offset + count > Length)
-//                throw new IOException("Reading out of bounds");
-//#endif
-//            BufferRegion val = new BufferRegion(Buffer, Offset, count);
-//            Offset += count;
-//            return val;
-//        }
+        //        public BufferRegion ReadBytes(int count)
+        //        {
+        //#if DEBUG
+        //            if (Offset < 0 || Offset + count > Length)
+        //                throw new IOException("Reading out of bounds");
+        //#endif
+        //            BufferRegion val = new BufferRegion(Buffer, Offset, count);
+        //            Offset += count;
+        //            return val;
+        //        }
 
         public short ReadInt16()
         {

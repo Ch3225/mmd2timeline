@@ -9,7 +9,7 @@ namespace mmd2timeline
         {
             get
             {
-                if(s_Setting==null)
+                if (s_Setting == null)
                 {
                     InitSetting();
                 }
@@ -30,7 +30,7 @@ namespace mmd2timeline
         }
         public static void InitSetting()
         {
-           var setting = new Dictionary<string, MorphSetting[]>();
+            var setting = new Dictionary<string, MorphSetting[]>();
             s_Setting = setting;
             //眉
             setting.Add("真面目", new MorphSetting[] { new MorphSetting("Brow Down") });

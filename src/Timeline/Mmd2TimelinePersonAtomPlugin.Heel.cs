@@ -94,7 +94,7 @@ namespace mmd2timeline
                         p2.val = footJointDriveXTargetAdjust.val;
                     }
                 }
-                else if(item.name=="lToeControl" || item.name == "rToeControl")
+                else if (item.name == "lToeControl" || item.name == "rToeControl")
                 {
                     var p2 = item.GetFloatJSONParam("jointDriveXTarget");
                     if (enableHeel.val)

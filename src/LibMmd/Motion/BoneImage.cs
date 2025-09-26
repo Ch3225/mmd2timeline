@@ -47,11 +47,11 @@ namespace LibMMD.Motion
         public int[] IkLinks { get; set; }
 
         //AxisFixType
-        public const int FixNone=0;
-        public const int FixX=1;
-        public const int FixY=2;
-        public const int FixZ=3;
-        public const int FixAll=4;
+        public const int FixNone = 0;
+        public const int FixX = 1;
+        public const int FixY = 2;
+        public const int FixZ = 3;
+        public const int FixAll = 4;
 
         //AxisTransformOrder
         public const int OrderZxy = 0;

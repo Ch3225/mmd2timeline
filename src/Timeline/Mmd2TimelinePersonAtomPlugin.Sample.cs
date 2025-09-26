@@ -19,7 +19,7 @@ namespace mmd2timeline
             float max = m_EndTime - m_BeginTime;
             return Mathf.Clamp(val, min, max);
         }
-        
+
         public bool IsSampling = false;
 
         public TimelineJson m_PersonAniJson;
@@ -32,7 +32,7 @@ namespace mmd2timeline
         public void SetFingerKeyFrame(float time, string boneName, string key, float value)
         {
             var dic = boneName.StartsWith("l") ? m_LeftFingerMotions : m_RightFingerMotions;
-            TimelineFrameJson f = new TimelineFrameJson(time, (int)value,"3");
+            TimelineFrameJson f = new TimelineFrameJson(time, (int)value, "3");
             dic[key].Value.Add(f);
         }
 
@@ -133,7 +133,7 @@ namespace mmd2timeline
                         continue;
                 }
                 //没有控制关节，不导出帧
-                if (controllerNameLookup[item].currentPositionState== FreeControllerV3.PositionState.Off)
+                if (controllerNameLookup[item].currentPositionState == FreeControllerV3.PositionState.Off)
                 {
                     continue;
                 }
@@ -142,17 +142,17 @@ namespace mmd2timeline
                 timelineControlLookup.Add(item, controlJson);
                 clipJson.Controllers.Add(controlJson);
             }
-            if(m_SampleCo!=null)
+            if (m_SampleCo != null)
             {
                 StopCoroutine(m_SampleCo);
                 m_SampleCo = null;
             }
-            m_SampleCo= StartCoroutine(CoStepPlay(beginTime, endTime));
+            m_SampleCo = StartCoroutine(CoStepPlay(beginTime, endTime));
         }
         Coroutine m_SampleCo = null;
         bool IsPausing
         {
-            get;set;
+            get; set;
         }
         bool IsSteping
         {
@@ -175,14 +175,14 @@ namespace mmd2timeline
                 {
                     int start = personFrameSteps[0];
                     int end = personFrameSteps[personFrameSteps.Count - 1];
-                    for(int i=start; i <= end; i++)
+                    for (int i = start; i <= end; i++)
                     {
                         frames.Add(i);
                     }
                 }
                 personFrameSteps = frames;
             }
-            
+
 
             sampleTimeLabel.text = GetTimeText();
             for (int i = 0; i < personFrameSteps.Count; i++)

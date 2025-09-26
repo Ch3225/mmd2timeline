@@ -32,7 +32,8 @@ namespace mmd2timeline
             {
                 return _MmdPersonGameObject._model.m_BoneAdjust;
             }
-            else { return new Dictionary<string, Vector3>(); };
+            else { return new Dictionary<string, Vector3>(); }
+            ;
         }
 
         /// <summary>

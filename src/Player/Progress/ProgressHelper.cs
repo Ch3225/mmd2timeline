@@ -10,7 +10,7 @@ namespace mmd2timeline
     internal partial class ProgressHelper
     {
         //public int SyncMode = ProgressSyncMode.SyncWithAudio;
-        
+
         /// <summary>
         /// 播放状态改变的回调委托
         /// </summary>

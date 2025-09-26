@@ -8,7 +8,7 @@ namespace LibMMD.Util
 {
     public static class MmdReaderUtil2
     {
-        public static string ReadStringFixedLength(BufferBinaryReader reader, int length, Encoding encoding=null)
+        public static string ReadStringFixedLength(BufferBinaryReader reader, int length, Encoding encoding = null)
         {
             if (length < 0)
             {
@@ -20,7 +20,7 @@ namespace LibMMD.Util
             }
             var bytes = reader.ReadBytes(length);
             string str = null;
-            if(encoding!=null)
+            if (encoding != null)
                 str = encoding.GetString(bytes);
             else
                 str = ToEncoding.ToUnicode(bytes);
@@ -58,7 +58,7 @@ namespace LibMMD.Util
             ret.w = MathUtil.NanToZero(reader.ReadSingle());
             return ret;
         }
-        
+
         public static Vector3 ReadVector3(BufferBinaryReader reader)
         {
             var ret = new Vector3();
@@ -67,7 +67,7 @@ namespace LibMMD.Util
             ret[2] = MathUtil.NanToZero(reader.ReadSingle());
             return ret;
         }
-        
+
         public static Vector2 ReadVector2(BufferBinaryReader reader)
         {
             var ret = new Vector2();
@@ -102,7 +102,7 @@ namespace LibMMD.Util
             };
             return ret;
         }
-        
+
         //public static bool Eof(BinaryReader binaryReader)
         //{
         //    var bs = binaryReader.BaseStream;

@@ -5,7 +5,7 @@ namespace mmd2timeline
 {
     partial class Mmd2TimelinePersonAtomPlugin
     {
-        Text CreateLabel(string v, bool rightSide, Color color,bool bold=true)
+        Text CreateLabel(string v, bool rightSide, Color color, bool bold = true)
         {
             var header = CreateSpacer(rightSide);
             if (header)
@@ -22,7 +22,7 @@ namespace mmd2timeline
             return null;
         }
 
-        void CreateHeader(string v, bool rightSide, Color color,bool bold=true)
+        void CreateHeader(string v, bool rightSide, Color color, bool bold = true)
         {
             var header = CreateSpacer(rightSide);
             if (header != null)

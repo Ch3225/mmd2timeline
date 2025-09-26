@@ -90,7 +90,7 @@ namespace mmd2timeline
                         num = -euler.z;
                         break;
                 }
-                fingerOutput.currentBend =num- fingerOutput.bendOffset;
+                fingerOutput.currentBend = num - fingerOutput.bendOffset;
             }
 
         }

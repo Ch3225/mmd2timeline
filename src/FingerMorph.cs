@@ -8,7 +8,7 @@ namespace mmd2timeline
 {
     class FingerMorph
     {
-        public static string[] StorableNames= new string[] {
+        public static string[] StorableNames = new string[] {
             "LeftHandFingerControl","RightHandFingerControl",
         };
         public static HashSet<string> setting = new HashSet<string>()
@@ -48,10 +48,11 @@ namespace mmd2timeline
 
         public DAZMorphFormula CreateDAZMorphFormula(DAZMorphFormulaTargetType targetType, string target, float multiplier)
         {
-            return new DAZMorphFormula() { 
-                targetType = targetType, 
-                target = target, 
-                multiplier = multiplier, 
+            return new DAZMorphFormula()
+            {
+                targetType = targetType,
+                target = target,
+                multiplier = multiplier,
             };
         }
         //Pose Controls/Hands/Right/Fingers
@@ -177,10 +178,10 @@ namespace mmd2timeline
 
 
 
-       public static Vector3 ConvertToMorphRotation(DAZBone bone, ConfigurableJoint configurableJoint)
+        public static Vector3 ConvertToMorphRotation(DAZBone bone, ConfigurableJoint configurableJoint)
         {
             //角度
-            Vector3 r = Quaternion2Angles.GetAngles(configurableJoint.targetRotation, bone.jointDriveTargetRotationOrder)* 57.29578f;
+            Vector3 r = Quaternion2Angles.GetAngles(configurableJoint.targetRotation, bone.jointDriveTargetRotationOrder) * 57.29578f;
 
             Vector3 vector = new Vector3();
             Vector3 axis = configurableJoint.axis;

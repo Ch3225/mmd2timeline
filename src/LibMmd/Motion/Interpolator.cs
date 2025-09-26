@@ -37,7 +37,7 @@ namespace LibMMD.Motion
                 return x;
             }
             x *= PresampleResolution - 1;
-            var ix = (int) x;
+            var ix = (int)x;
             var r = x - ix;
             if (ix < PresampleResolution - 1)
             {
@@ -57,7 +57,7 @@ namespace LibMMD.Motion
                 _isLinear = false;
                 for (var i = 0; i < PresampleResolution; ++i)
                 {
-                    var x = i / (float) (PresampleResolution - 1);
+                    var x = i / (float)(PresampleResolution - 1);
                     _presamples[i] = Interpolate(x);
                 }
             }

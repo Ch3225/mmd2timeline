@@ -10,11 +10,11 @@ namespace LibMMD.Reader
 {
     public class PmxReader2 : ModelReader2
     {
-        
+
         public override MmdModel Read(BufferBinaryReader reader)
         {
             var pmxHeader = ReadMeta(reader);
-            if (!"PMX ".Equals(pmxHeader.Magic) || Math.Abs(pmxHeader.Version - 2.0f) > 0.0001f || pmxHeader.FileFlagSize !=8)
+            if (!"PMX ".Equals(pmxHeader.Magic) || Math.Abs(pmxHeader.Version - 2.0f) > 0.0001f || pmxHeader.FileFlagSize != 8)
             {
                 throw new MmdFileParseException("File is not a PMX 2.0 file");
             }
@@ -461,7 +461,7 @@ namespace LibMMD.Reader
             reader.ReadSingle();
         }
 
-        private static void ReadMaterial(BufferBinaryReader reader,  Encoding encoding,
+        private static void ReadMaterial(BufferBinaryReader reader, Encoding encoding,
             int textureIndexSize)
         {
             MmdReaderUtil2.ReadSizedString(reader, encoding);
@@ -528,9 +528,9 @@ namespace LibMMD.Reader
             public int ExtraUvNumber { get; set; }
             public int VertexIndexSize { get; set; }
             public int TextureIndexSize { get; set; }
-            public int MaterialIndexSize{ get; set; }
+            public int MaterialIndexSize { get; set; }
             public int BoneIndexSize { get; set; }
-            public int MorphIndexSize  { get; set; }
+            public int MorphIndexSize { get; set; }
             public int RigidBodyIndexSize { get; set; }
         }
 
