@@ -1,0 +1,647 @@
+{ 
+   "id" : "RELAXED hands", 
+   "displayName" : "RELAXED hands", 
+   "group" : "_MorphMerger", 
+   "region" : "_MorphMerger", 
+   "min" : "0", 
+   "max" : "1", 
+   "numDeltas" : "2206", 
+   "isPoseControl" : "false", 
+   "formulas" : [ 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lCarpal1", 
+         "multiplier" : "-1.385526E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lCarpal1", 
+         "multiplier" : "2.581075E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lCarpal1", 
+         "multiplier" : "1.366692E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lIndex1", 
+         "multiplier" : "-0.0008353118"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lIndex1", 
+         "multiplier" : "-7.920103E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lIndex1", 
+         "multiplier" : "-0.001172719"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lIndex1", 
+         "multiplier" : "5.151878"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lIndex1", 
+         "multiplier" : "-15.20184"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lIndex2", 
+         "multiplier" : "-0.001300462"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lIndex2", 
+         "multiplier" : "-0.0001022604"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lIndex2", 
+         "multiplier" : "-0.00180292"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lIndex2", 
+         "multiplier" : "-24.92105"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lIndex3", 
+         "multiplier" : "-0.001285952"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lIndex3", 
+         "multiplier" : "-0.000117"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lIndex3", 
+         "multiplier" : "-0.001794502"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lIndex3", 
+         "multiplier" : "-15.45105"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lMid1", 
+         "multiplier" : "-0.0002206033"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lMid1", 
+         "multiplier" : "5.103193E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lMid1", 
+         "multiplier" : "-0.000266112"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lMid1", 
+         "multiplier" : "0.9433021"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lMid1", 
+         "multiplier" : "-34.68185"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lMid2", 
+         "multiplier" : "-0.0003362603"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lMid2", 
+         "multiplier" : "-3.766797E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lMid2", 
+         "multiplier" : "-0.000623892"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lMid2", 
+         "multiplier" : "-51.16995"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lMid3", 
+         "multiplier" : "-0.0003331814"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lMid3", 
+         "multiplier" : "-5.214559E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lMid3", 
+         "multiplier" : "-0.0006206575"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lMid3", 
+         "multiplier" : "-32.40763"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lCarpal2", 
+         "multiplier" : "-2.053723E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lCarpal2", 
+         "multiplier" : "5.823795E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lCarpal2", 
+         "multiplier" : "3.312734E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lRing1", 
+         "multiplier" : "0.0003139544"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lRing1", 
+         "multiplier" : "0.0004205056"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lRing1", 
+         "multiplier" : "0.001144173"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lRing1", 
+         "multiplier" : "-1.843066"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lRing1", 
+         "multiplier" : "-37.4973"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lRing2", 
+         "multiplier" : "0.000493811"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lRing2", 
+         "multiplier" : "0.0005994777"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lRing2", 
+         "multiplier" : "0.001718175"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lRing2", 
+         "multiplier" : "-55.32389"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lRing3", 
+         "multiplier" : "0.0005077971"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lRing3", 
+         "multiplier" : "0.0005472664"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lRing3", 
+         "multiplier" : "0.00169426"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lRing3", 
+         "multiplier" : "-39.95614"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lPinky1", 
+         "multiplier" : "0.0003824446"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lPinky1", 
+         "multiplier" : "0.0009425511"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lPinky1", 
+         "multiplier" : "0.001989102"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lPinky1", 
+         "multiplier" : "-5.151878"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lPinky1", 
+         "multiplier" : "-40.36769"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lPinky2", 
+         "multiplier" : "0.0005164114"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lPinky2", 
+         "multiplier" : "0.001175634"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lPinky2", 
+         "multiplier" : "0.002594283"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lPinky2", 
+         "multiplier" : "-59.55888"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "lPinky3", 
+         "multiplier" : "0.0005397"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "lPinky3", 
+         "multiplier" : "0.00113528"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "lPinky3", 
+         "multiplier" : "0.002591233"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lPinky3", 
+         "multiplier" : "-49.6324"
+      }, 
+      { 
+         "targetType" : "RotationX", 
+         "target" : "lThumb1", 
+         "multiplier" : "9.226216"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lThumb1", 
+         "multiplier" : "8.979505"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "lThumb1", 
+         "multiplier" : "5.581202"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "lThumb2", 
+         "multiplier" : "9.813963"
+      }, 
+      { 
+         "targetType" : "MorphValue", 
+         "target" : "PBMlFingersSqueeze", 
+         "multiplier" : "0.4293232"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rCarpal1", 
+         "multiplier" : "1.584742E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rCarpal1", 
+         "multiplier" : "2.952191E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rCarpal1", 
+         "multiplier" : "1.5632E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rIndex1", 
+         "multiplier" : "0.0009554159"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rIndex1", 
+         "multiplier" : "-9.058883E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rIndex1", 
+         "multiplier" : "-0.001341336"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rIndex1", 
+         "multiplier" : "-5.892634"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rIndex1", 
+         "multiplier" : "23.79769"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rIndex2", 
+         "multiplier" : "0.001487448"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rIndex2", 
+         "multiplier" : "-0.0001169637"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rIndex2", 
+         "multiplier" : "-0.002062151"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rIndex2", 
+         "multiplier" : "39.0126"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rIndex3", 
+         "multiplier" : "0.001470851"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rIndex3", 
+         "multiplier" : "-0.0001338227"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rIndex3", 
+         "multiplier" : "-0.002052522"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rIndex3", 
+         "multiplier" : "24.18781"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rMid1", 
+         "multiplier" : "0.0002523224"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rMid1", 
+         "multiplier" : "5.836949E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rMid1", 
+         "multiplier" : "-0.0003043745"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rMid1", 
+         "multiplier" : "-1.078933"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rMid1", 
+         "multiplier" : "40.84274"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rMid2", 
+         "multiplier" : "0.0003846091"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rMid2", 
+         "multiplier" : "-4.308401E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rMid2", 
+         "multiplier" : "-0.0007135975"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rMid2", 
+         "multiplier" : "60.25977"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rMid3", 
+         "multiplier" : "0.0003810874"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rMid3", 
+         "multiplier" : "-5.964328E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rMid3", 
+         "multiplier" : "-0.0007098979"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rMid3", 
+         "multiplier" : "38.16452"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rCarpal2", 
+         "multiplier" : "2.349015E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rCarpal2", 
+         "multiplier" : "6.661161E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rCarpal2", 
+         "multiplier" : "3.789051E-05"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rRing1", 
+         "multiplier" : "-0.0003590959"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rRing1", 
+         "multiplier" : "0.0004809674"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rRing1", 
+         "multiplier" : "0.001308686"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rRing1", 
+         "multiplier" : "2.108069"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rRing1", 
+         "multiplier" : "41.24864"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rRing2", 
+         "multiplier" : "-0.0005648129"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rRing2", 
+         "multiplier" : "0.0006856727"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rRing2", 
+         "multiplier" : "0.001965221"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rRing2", 
+         "multiplier" : "60.85865"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rRing3", 
+         "multiplier" : "-0.00058081"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rRing3", 
+         "multiplier" : "0.0006259544"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rRing3", 
+         "multiplier" : "0.001937867"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rRing3", 
+         "multiplier" : "43.95347"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rPinky1", 
+         "multiplier" : "-0.0004374338"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rPinky1", 
+         "multiplier" : "0.001078075"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rPinky1", 
+         "multiplier" : "0.002275103"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rPinky1", 
+         "multiplier" : "5.892634"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rPinky1", 
+         "multiplier" : "40.56373"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rPinky2", 
+         "multiplier" : "-0.0005906629"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rPinky2", 
+         "multiplier" : "0.001344671"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rPinky2", 
+         "multiplier" : "0.002967298"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rPinky2", 
+         "multiplier" : "59.84813"
+      }, 
+      { 
+         "targetType" : "BoneCenterX", 
+         "target" : "rPinky3", 
+         "multiplier" : "-0.0006173001"
+      }, 
+      { 
+         "targetType" : "BoneCenterY", 
+         "target" : "rPinky3", 
+         "multiplier" : "0.001298515"
+      }, 
+      { 
+         "targetType" : "BoneCenterZ", 
+         "target" : "rPinky3", 
+         "multiplier" : "0.00296381"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rPinky3", 
+         "multiplier" : "49.87344"
+      }, 
+      { 
+         "targetType" : "RotationX", 
+         "target" : "rThumb1", 
+         "multiplier" : "10.55279"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rThumb1", 
+         "multiplier" : "-10.27059"
+      }, 
+      { 
+         "targetType" : "RotationZ", 
+         "target" : "rThumb1", 
+         "multiplier" : "-6.383687"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rThumb2", 
+         "multiplier" : "-11.22503"
+      }, 
+      { 
+         "targetType" : "MorphValue", 
+         "target" : "PBMrFingersSqueeze", 
+         "multiplier" : "0.4910528"
+      }, 
+      { 
+         "targetType" : "RotationY", 
+         "target" : "rThumb3", 
+         "multiplier" : "2.837181E-05"
+      }
+   ]
+}

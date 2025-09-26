@@ -1,0 +1,4 @@
+src\Common\PoseJoints.cs
+src\Common\MiscCommon.cs
+src\Common\UIManager.cs
+src\Misc\PoseCamera4.cs

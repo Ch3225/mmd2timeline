@@ -1,0 +1,44 @@
+{ 
+   "licenseType" : "PC", 
+   "creatorName" : "miscreated", 
+   "packageName" : "BodyHandling", 
+   "standardReferenceVersionOption" : "Latest", 
+   "scriptReferenceVersionOption" : "Exact", 
+   "description" : "PluginBundle including Pose Camera 4.0\r\n\r\nReAnimator 3.1\r\nRopeHandler 6.0.2\r\nRelax 5.4.1\r\nMotionManager 1.6.3\r\nVisualizer 1.6.3\r\nFloating V2.0\r\nUndoRedo.cs 1.0.2\r\nMuscleManager 2.1\r\nBalance 4.2\r\nUI Manager 4.9\r\n Please watch videos of how to use the plugins on youtube: https://www.youtube.com/miscreatedreality/", 
+   "credits" :  "MacGruber for Field of View code, VamDeluxe and acidBubbles for UIManager inspiration and of course all my patreons!", 
+   "instructions" : "https://www.miscreatedreality.com/", 
+   "promotionalLink" : "https://www.patreon.com/MiscreatedReality", 
+   "programVersion" : "1.20.77.9", 
+   "contentList" : [ 
+      "Custom/Scripts/miscreated/BodyHandling", 
+      "Custom/Scripts/miscreated/DontUse", 
+      "Custom/Scripts/miscreated/PoseCamera4.cslist", 
+      "Custom/Scripts/miscreated/Balance.cslist", 
+      "Custom/Scripts/miscreated/RopeRelax.cslist", 
+      "Custom/Scripts/miscreated/Complete.cslist", 
+      "Custom/Scripts/miscreated/Swim.cslist",
+      "Custom/Scripts/miscreated/MostUsed.cslist",
+      "Custom/Scripts/miscreated/RopeRelaxMuscleAnimation.cslist",  
+      "Custom/Scripts/miscreated/Common",
+      "Custom/Scripts/miscreated/Misc", 
+      "Custom/Scripts/miscreated/Experimental", 
+      "Custom/Scripts/miscreated/Rope/default",
+      "Custom/Scripts/miscreated/Poses", 
+      "Custom/Scripts/miscreated/Rope", 
+      "Custom/Scripts/miscreated/SubMotion", 
+      "Custom/Scripts/miscreated/Balance", 
+      "Custom/Scripts/miscreated/Relax", 
+      "Custom/Scripts/miscreated/RopeConfiguration", 
+      "Custom/Scripts/miscreated/UIManager",
+      "Saves/PluginData/miscreated/ReAnimations",
+      "Saves/PluginData/miscreated/Floating",
+      "Saves/PluginData/miscreated/PoseCamera",
+      "Custom/Atom/Person/Morphs/female/AUTO/RELAXED hands.vmi", 
+      "Custom/Atom/Person/Morphs/female/AUTO/RELAXED hands.vmb" 
+   ], 
+   "dependencies" : { 
+   }, 
+   "customOptions" : { 
+      "preloadMorphs" : "true"
+   }
+}

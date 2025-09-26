@@ -1,0 +1,159 @@
+{ 
+   "id" : "plugin#0_Miscreated.RopeHandler", 
+   "enabled" : "true", 
+   "Tangled Lifters" : "false", 
+   "Neck" : "false", 
+   "lArm" : "false", 
+   "Chest" : "false", 
+   "rArm" : "false", 
+   "lHand" : "true", 
+   "Pelvis" : "false", 
+   "rHand" : "true", 
+   "Hip" : "false", 
+   "lKnee" : "false", 
+   "rKnee" : "false", 
+   "lFoot" : "true", 
+   "rFoot" : "true", 
+   "Explosion Detecton" : "true", 
+   "Cuffs Front" : "false", 
+   "Cuffs Back" : "false", 
+   "Left Cuffs" : "false", 
+   "Right Cuffs" : "false", 
+   "Feet Cuffs" : "false",
+   "Cloth Neck" : "false", 
+   "Cloth Wrist" : "false", 
+   "Cloth Knee" : "false", 
+   "Cloth Ankle" : "false", 
+   "Visible Ropes" : "false", 
+   "Visible Cuff Ropes" : "true", 
+   "Visible Chains" : "true", 
+   "Visible Manacles" : "true", 
+   "Always vertical" : "false", 
+   "Show Control" : "false", 
+   "Rotation lock" : "false", 
+   "Auto Drop" : "false", 
+   "neckControloffset" : "0", 
+   "lArmControloffset" : "0", 
+   "chestControloffset" : "0", 
+   "rArmControloffset" : "0", 
+   "lHandControloffset" : "0.5305867", 
+   "pelvisControloffset" : "0", 
+   "rHandControloffset" : "0.5305867", 
+   "hipControloffset" : "0", 
+   "lKneeControloffset" : "0", 
+   "rKneeControloffset" : "0", 
+   "lFootControloffset" : "0.5305867", 
+   "rFootControloffset" : "0.5305867", 
+   "Lift speed" : "4", 
+   "Step rotation" : "0.25", 
+   "Hanging height" : "2.1", 
+   "Rotation speed" : "0", 
+   "Hand Links" : "5", 
+   "Feet Links" : "5", 
+   "Hand Feet Links" : "5", 
+   "Lifter Links" : "5", 
+   "Strength" : "200", 
+   "Link Radius [cm]" : "3", 
+   "Damper" : "20", 
+   "Link Mass" : "1", 
+   "Ang. Drag" : "5", 
+   "Drag" : "5", 
+   "Mass Scale" : "10", 
+   "Strength Timer" : "1", 
+   "Connected Link Dist X" : "0", 
+   "Connected Link Dist Y" : "0", 
+   "Connected Link Dist Z" : "0", 
+   "Chain Links" : "100", 
+   "Hanging Force" : "650", 
+   "Position Damper" : "35", 
+   "Rotation Damper" : "5", 
+   "Neck scale" : "1", 
+   "Neck rotation" : "0", 
+   "Hand offset X" : "0.21", 
+   "Hand offset Y" : "0", 
+   "Hand offset Z" : "0", 
+   "Hand scale" : "1", 
+   "Hand rotation" : "0", 
+   "Knee offset X" : "0", 
+   "Knee offset Y" : "-0.04", 
+   "Knee offset Z" : "0", 
+   "Knee scale" : "1", 
+   "Knee rotation X" : "-10", 
+   "Knee rotation Y" : "0", 
+   "Foot offset X" : "0.005", 
+   "Foot offset Y" : "-0.42", 
+   "Foot offset Z" : "-0.005", 
+   "Foot scale" : "1", 
+   "Foot rotation" : "0", 
+   "neckControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "lArmControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "chestControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "rArmControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "lHandControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "pelvisControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "rHandControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "hipControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "lKneeControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "rKneeControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "lFootControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "rFootControlrot" : [ 
+      "0", 
+      "0", 
+      "0"
+   ], 
+   "pluginLabel" : "", 
+   "Chain Color" : { 
+      "h" : "0", 
+      "s" : "1", 
+      "v" : "1"
+   }, 
+   "Manacles Color" : { 
+      "h" : "0", 
+      "s" : "1", 
+      "v" : "1"
+   }
+}

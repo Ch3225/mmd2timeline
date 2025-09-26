@@ -1,0 +1,4460 @@
+{ 
+   "name" : "Joints", 
+   "joints" : [ 
+      { 
+         "name" : "hip", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "600", 
+            "damper" : "40", 
+            "maxforce" : "1E+13"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "600", 
+            "damper" : "40", 
+            "maxforce" : "1E+13"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "600", 
+            "damper" : "40", 
+            "maxforce" : "1E+13"
+         }
+      }, 
+      { 
+         "name" : "pelvis", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "150", 
+            "damper" : "1", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "rThigh", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "90", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "76.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "50", 
+            "damper" : "0.5", 
+            "maxforce" : "18"
+         }
+      }, 
+      { 
+         "name" : "rShin", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-135", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9.9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "40", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rFoot", 
+         "linearlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "rToe", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "7.2", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.05", 
+            "damper" : "0.005", 
+            "maxforce" : "0.05"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "rBigToe", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "1000", 
+            "damper" : "10", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "rSmallToe1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "rSmallToe2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "rSmallToe3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "rSmallToe4", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "LGlute", 
+         "linearlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.05", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "7", 
+            "damper" : "0.5", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "7", 
+            "damper" : "0.5", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "21", 
+            "damper" : "1.5", 
+            "maxforce" : "3.402823E+38"
+         }
+      }, 
+      { 
+         "name" : "RGlute", 
+         "linearlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "10.5", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.05", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "7", 
+            "damper" : "0.5", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "7", 
+            "damper" : "0.5", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "21", 
+            "damper" : "1.5", 
+            "maxforce" : "3.402823E+38"
+         }
+      }, 
+      { 
+         "name" : "lThigh", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "90", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "76.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "50", 
+            "damper" : "0.5", 
+            "maxforce" : "18"
+         }
+      }, 
+      { 
+         "name" : "lShin", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-135", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9.9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "40", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lFoot", 
+         "linearlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "25", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "lToe", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "7.2", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.05", 
+            "damper" : "0.005", 
+            "maxforce" : "0.05"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lBigToe", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lSmallToe1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lSmallToe2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lSmallToe3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lSmallToe4", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.001", 
+            "maxforce" : "0.01"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "abdomen", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "6", 
+            "damper" : "0.6", 
+            "maxforce" : "6"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "100", 
+            "damper" : "1", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "abdomen2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "5", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "6", 
+            "damper" : "0.6", 
+            "maxforce" : "6"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "100", 
+            "damper" : "1", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "chest", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "25", 
+            "damper" : "0.6", 
+            "maxforce" : "6"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "1", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "rCollar", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "200", 
+            "damper" : "10", 
+            "maxforce" : "200"
+         }
+      }, 
+      { 
+         "name" : "rShldr", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "63", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "40", 
+            "damper" : "2", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "rForeArm", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "117", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.1", 
+            "maxforce" : "0.1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "1", 
+            "damper" : "0", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rHand", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.01", 
+            "damper" : "0.01", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.01", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "20"
+         }
+      }, 
+      { 
+         "name" : "rCarpal2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-3.6", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "2.7", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3.6", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "rRing1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rRing2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rRing3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rPinky1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rPinky2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rPinky3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rCarpal1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-1.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "rIndex1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rIndex2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rIndex3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rMid1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rMid2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rMid3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rThumb1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-49.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "40", 
+            "damper" : "2", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "rThumb2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-49.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "rThumb3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-70.2", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lPectoral", 
+         "linearlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.05", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "30", 
+            "damper" : "0.4", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "30", 
+            "damper" : "0.4", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "90", 
+            "damper" : "1.2", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "lNipple", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "0"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "0"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "0"
+         }
+      }, 
+      { 
+         "name" : "rPectoral", 
+         "linearlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "45", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.05", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "30", 
+            "damper" : "0.4", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "30", 
+            "damper" : "0.4", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "90", 
+            "damper" : "1.2", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "rNipple", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "1000"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "1000"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "1000"
+         }
+      }, 
+      { 
+         "name" : "neck", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "31.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "2", 
+            "maxforce" : "25"
+         }
+      }, 
+      { 
+         "name" : "head", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-31.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "80", 
+            "damper" : "5", 
+            "maxforce" : "70"
+         }
+      }, 
+      { 
+         "name" : "lowerJaw", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-31.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "0.9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "30", 
+            "damper" : "2", 
+            "maxforce" : "0.5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "30", 
+            "damper" : "2", 
+            "maxforce" : "0.5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "30", 
+            "damper" : "2", 
+            "maxforce" : "10"
+         }
+      }, 
+      { 
+         "name" : "tongueBase", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "50", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "tongue01", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "50", 
+            "damper" : "1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "tongue02", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "50", 
+            "maxforce" : "500"
+         }
+      }, 
+      { 
+         "name" : "tongue03", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.2", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "tongue04", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-54", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.4", 
+            "maxforce" : "2"
+         }
+      }, 
+      { 
+         "name" : "tongue05", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.2", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "tongueTip", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0.02", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "22.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "4", 
+            "damper" : "0.1", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.2", 
+            "maxforce" : "1"
+         }
+      }, 
+      { 
+         "name" : "lCollar", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "200", 
+            "damper" : "10", 
+            "maxforce" : "200"
+         }
+      }, 
+      { 
+         "name" : "lShldr", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "63", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0", 
+            "damper" : "0", 
+            "maxforce" : "3.402823E+38"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "40", 
+            "damper" : "2", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "lForeArm", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-117", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "58.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.1", 
+            "maxforce" : "0.1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "1", 
+            "damper" : "0", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "20", 
+            "damper" : "0.5", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lHand", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "72", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "36", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "0.01", 
+            "damper" : "0.01", 
+            "maxforce" : "1"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "0.1", 
+            "damper" : "0.01", 
+            "maxforce" : "1"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "10", 
+            "damper" : "0.5", 
+            "maxforce" : "20"
+         }
+      }, 
+      { 
+         "name" : "lCarpal2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-2.7", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "3.6", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3.6", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "lRing1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lRing2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lRing3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lPinky1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lPinky2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lPinky3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lCarpal1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "1.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "lIndex1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "18", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lIndex2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lIndex3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lMid1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "45", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "4.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lMid2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "10.8", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lMid3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-67.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "9", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lThumb1", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "49.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "40.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "500", 
+            "damper" : "5", 
+            "maxforce" : "50"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "40", 
+            "damper" : "2", 
+            "maxforce" : "50"
+         }
+      }, 
+      { 
+         "name" : "lThumb2", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "49.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "13.5", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }, 
+      { 
+         "name" : "lThumb3", 
+         "linearlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularxlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "angularyzlimitspring" : { 
+            "spring" : "0", 
+            "damper" : "0"
+         }, 
+         "linearlimit" : { 
+            "limit" : "0", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "lowangularxlimit" : { 
+            "limit" : "-27", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "highangularxlimit" : { 
+            "limit" : "70.2", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularylimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularzlimit" : { 
+            "limit" : "3", 
+            "bounciness" : "0", 
+            "contactdistance" : "0"
+         }, 
+         "angularxdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "angularyzdrive" : { 
+            "spring" : "8", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }, 
+         "slerpdrive" : { 
+            "spring" : "2", 
+            "damper" : "0.1", 
+            "maxforce" : "5"
+         }
+      }
+   ]
+}

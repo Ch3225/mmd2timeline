@@ -1,0 +1,10 @@
+{ 
+   "id" : "plugin#0_Miscreated.SubMotion", 
+   "Active Move" : "true", 
+   "mXHead" : "false", 
+   "mZHead" : "false", 
+   "Position Speed" : "0.5", 
+   "Move Amount" : "0.36", 
+   "Move Speed" : "0.3", 
+   "Head Move" : "4.3"
+}

@@ -1,0 +1,211 @@
+{ 
+   "bodyjoints" : [ 
+      { 
+         "name" : "pelvis", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "1000", 
+         "damper" : "18", 
+         "spring" : "800"
+      }, 
+      { 
+         "name" : "rThigh", 
+         "x" : "73.99999", 
+         "y" : "24.00001", 
+         "z" : "18.00001", 
+         "force" : "800", 
+         "damper" : "9", 
+         "spring" : "800"
+      }, 
+      { 
+         "name" : "rShin", 
+         "x" : "-37", 
+         "y" : "180", 
+         "z" : "180", 
+         "force" : "150", 
+         "damper" : "9", 
+         "spring" : "150"
+      }, 
+      { 
+         "name" : "rFoot", 
+         "x" : "-34", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "100", 
+         "damper" : "9", 
+         "spring" : "200"
+      }, 
+      { 
+         "name" : "LGlute", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "3.402823E+38", 
+         "damper" : "1.5", 
+         "spring" : "21"
+      }, 
+      { 
+         "name" : "RGlute", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "3.402823E+38", 
+         "damper" : "1.5", 
+         "spring" : "21"
+      }, 
+      { 
+         "name" : "lThigh", 
+         "x" : "73.99999", 
+         "y" : "-24", 
+         "z" : "-18", 
+         "force" : "800", 
+         "damper" : "9", 
+         "spring" : "800"
+      }, 
+      { 
+         "name" : "lShin", 
+         "x" : "-37", 
+         "y" : "180", 
+         "z" : "180", 
+         "force" : "150", 
+         "damper" : "9", 
+         "spring" : "150"
+      }, 
+      { 
+         "name" : "lFoot", 
+         "x" : "-34", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "100", 
+         "damper" : "9", 
+         "spring" : "200"
+      }, 
+      { 
+         "name" : "abdomen", 
+         "x" : "-50", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "1000", 
+         "damper" : "36", 
+         "spring" : "1000"
+      }, 
+      { 
+         "name" : "abdomen2", 
+         "x" : "-50", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "1000", 
+         "damper" : "36", 
+         "spring" : "1000"
+      }, 
+      { 
+         "name" : "chest", 
+         "x" : "-50", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "1000", 
+         "damper" : "36", 
+         "spring" : "500"
+      }, 
+      { 
+         "name" : "rCollar", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "400", 
+         "damper" : "36", 
+         "spring" : "400"
+      }, 
+      { 
+         "name" : "rShldr", 
+         "x" : "-10", 
+         "y" : "78", 
+         "z" : "0", 
+         "force" : "300", 
+         "damper" : "9", 
+         "spring" : "300"
+      }, 
+      { 
+         "name" : "rForeArm", 
+         "x" : "30", 
+         "y" : "52", 
+         "z" : "0", 
+         "force" : "30", 
+         "damper" : "9", 
+         "spring" : "150"
+      }, 
+      { 
+         "name" : "rHand", 
+         "x" : "47", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "10", 
+         "damper" : "9", 
+         "spring" : "10"
+      }, 
+      { 
+         "name" : "rNipple", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "1000", 
+         "damper" : "0", 
+         "spring" : "0"
+      }, 
+      { 
+         "name" : "neck", 
+         "x" : "-9", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "90", 
+         "damper" : "36", 
+         "spring" : "90"
+      }, 
+      { 
+         "name" : "head", 
+         "x" : "-9", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "90", 
+         "damper" : "36", 
+         "spring" : "90"
+      }, 
+      { 
+         "name" : "lCollar", 
+         "x" : "0", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "400", 
+         "damper" : "36", 
+         "spring" : "400"
+      }, 
+      { 
+         "name" : "lShldr", 
+         "x" : "-10", 
+         "y" : "-78", 
+         "z" : "0", 
+         "force" : "300", 
+         "damper" : "9", 
+         "spring" : "300"
+      }, 
+      { 
+         "name" : "lForeArm", 
+         "x" : "-30", 
+         "y" : "52", 
+         "z" : "0", 
+         "force" : "30", 
+         "damper" : "9", 
+         "spring" : "150"
+      }, 
+      { 
+         "name" : "lHand", 
+         "x" : "-47", 
+         "y" : "0", 
+         "z" : "0", 
+         "force" : "10", 
+         "damper" : "9", 
+         "spring" : "10"
+      }
+   ]
+}

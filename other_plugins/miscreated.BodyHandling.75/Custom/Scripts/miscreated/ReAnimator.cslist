@@ -1,0 +1,6 @@
+﻿src\Common\PoseJoints.cs
+src\Shared\JointExtenders.cs
+src\Common\UIManager.cs
+src\Common\MiscCommon.cs
+src\Common\Humanoid.cs
+src\BodyHandling\ReAnimator.cs

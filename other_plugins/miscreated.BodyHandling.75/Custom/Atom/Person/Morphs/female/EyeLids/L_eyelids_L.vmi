@@ -1,0 +1,12 @@
+{ 
+   "id" : "L_eyelids_L", 
+   "displayName" : "L_eyelids_L", 
+   "group" : "!VL_13_Eyelids", 
+   "region" : "!VL_13_Eyelids", 
+   "min" : "-1", 
+   "max" : "1", 
+   "numDeltas" : "629", 
+   "isPoseControl" : "true", 
+   "formulas" : [ 
+   ]
+}

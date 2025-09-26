@@ -1,0 +1,31 @@
+{ 
+   "id" : "plugin#0_Miscreated.UIManager", 
+   "enabled" : "true", 
+   "Show Global UI [Ctrl+H]" : "true", 
+   "World UI" : "false", 
+   "Checkbox Toggles" : "true", 
+   "Auto Collapse" : "true", 
+   "Transparency" : "0.11", 
+   "Max Exp Toggles" : "2", 
+   "Max Exp Group" : "1", 
+   "Minimal UI Size" : "0", 
+   "pluginLabel" : "", 
+   "Neck Name" : "Leather-Cuff-Neck", 
+   "Left Wrist Name" : "Leather-Cuff-Left-Wrist", 
+   "Right Wrist Name" : "Leather-Cuff-Right-Wrist", 
+   "Left Knee Name" : "Leather-Cuff-Left-Knee", 
+   "Right Knee Name" : "Leather-Cuff-Right-Knee", 
+   "Left Ankle Name" : "Leather-Cuff-Left-Ankle", 
+   "Right Ankle Name" : "Leather-Cuff-Right-Ankle", 
+   "Right Arm Name" : "rope_forearm_2", 
+   "Background" : { 
+      "h" : "0.5135135", 
+      "s" : "0.2269939", 
+      "v" : "0.6392157"
+   }, 
+   "Text" : { 
+      "h" : "0.4740736", 
+      "s" : "0.3333371", 
+      "v" : "0"
+   }
+}

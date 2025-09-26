@@ -1,0 +1,6 @@
+﻿src\Common\PoseJoints.cs
+src\Common\MiscCommon.cs
+src\Common\UIManager.cs
+src\Experimental\UndoRedo2.cs
+src\Experimental\ObjectExplorer.cs
+src\BodyHandling\Visualizer.cs

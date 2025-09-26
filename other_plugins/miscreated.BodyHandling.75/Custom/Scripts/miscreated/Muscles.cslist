@@ -1,0 +1,6 @@
+﻿src\Shared\JointExtenders.cs
+src\Common\PoseJoints.cs
+src\Common\MiscCommon.cs
+src\Common\UIManager.cs
+src\Common\Humanoid.cs
+src\BodyHandling\MuscleManager.cs

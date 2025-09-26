@@ -1,0 +1,10 @@
+{ 
+   "id" : "plugin#0_Miscreated.Floating", 
+   "Float Active" : "true", 
+   "Total Body Mass" : "0.1", 
+   "Float Force" : "1", 
+   "Float Height [m]" : "5", 
+   "Wet Hair" : "0.8", 
+   "Drag" : "0", 
+   "Drag Angular" : "0"
+}

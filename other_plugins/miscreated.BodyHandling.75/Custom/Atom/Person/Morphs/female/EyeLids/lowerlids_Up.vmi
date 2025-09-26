@@ -1,0 +1,12 @@
+{ 
+   "id" : "lowerlids_Up", 
+   "displayName" : "lowerlids_Up", 
+   "group" : "!VL_13_Eyelids", 
+   "region" : "!VL_13_Eyelids", 
+   "min" : "-1", 
+   "max" : "1", 
+   "numDeltas" : "753", 
+   "isPoseControl" : "true", 
+   "formulas" : [ 
+   ]
+}

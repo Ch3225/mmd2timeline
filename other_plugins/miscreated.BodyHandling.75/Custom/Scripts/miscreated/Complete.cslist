@@ -1,0 +1,17 @@
+﻿src\Shared\JointExtenders.cs
+src\Common\PoseJoints.cs
+src\Common\MiscCommon.cs
+src\Common\UIManager.cs
+src\Common\Humanoid.cs
+src\BodyHandling\RopeHandler.cs
+src\BodyHandling\EyelidController.cs
+src\BodyHandling\GazeManager.cs
+src\BodyHandling\Relax.cs
+src\BodyHandling\Floating.cs
+src\BodyHandling\MotionManager.cs
+src\BodyHandling\MuscleManager.cs
+src\BodyHandling\FreezeBody.cs
+src\BodyHandling\ReAnimator.cs
+src\BodyHandling\Balance.cs
+src\BodyHandling\SubMotion.cs
+src\BodyHandling\Visualizer.cs

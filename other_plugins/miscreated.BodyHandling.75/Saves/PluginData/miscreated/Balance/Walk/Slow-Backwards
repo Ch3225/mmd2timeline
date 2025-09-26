@@ -1,0 +1,20 @@
+{ 
+   "id" : "plugin#0_Miscreated.Balance", 
+   "Active" : "true", 
+   "Show Debug Lines" : "false", 
+   "Walking" : "true", 
+   "BPM" : "164.25", 
+   "Other Thigh Angle" : "23", 
+   "Swing Arms" : "0.77", 
+   "Arm Angle" : "57.69", 
+   "Walk speed" : "-4.3", 
+   "Step Height" : "0.23", 
+   "Step Length" : "0.05", 
+   "Step Bow" : "0.03", 
+   "Feet distance" : "0.03", 
+   "Walk Feet Angle" : "8", 
+   "Ground Angle" : "43", 
+   "Above Ground Angle" : "48", 
+   "Left/Right foot balance/grounding" : "0.1", 
+   "Backward/Forward foot balance/grounding" : "0.2"
+}

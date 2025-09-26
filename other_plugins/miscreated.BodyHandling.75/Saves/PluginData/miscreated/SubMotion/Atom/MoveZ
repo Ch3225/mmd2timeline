@@ -1,0 +1,11 @@
+{ 
+   "id" : "plugin#0_Miscreated.SubMotion", 
+   "Active Move" : "true", 
+   "mXControl" : "false", 
+   "mYControl" : "false", 
+   "Physics" : "true", 
+   "Rotation Amount" : "48", 
+   "Rotation Speed" : "0.59", 
+   "Move Speed" : "3", 
+   "ControlMove" : "4.3"
+}

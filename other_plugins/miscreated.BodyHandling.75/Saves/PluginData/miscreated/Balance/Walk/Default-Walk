@@ -1,0 +1,20 @@
+{ 
+   "id" : "plugin#0_Miscreated.Balance", 
+   "Active" : "true", 
+   "Show Debug Lines" : "false", 
+   "Walking" : "true", 
+   "Head Rotate" : "false", 
+   "Head [m]" : "1.55", 
+   "Chest [m]" : "1.21", 
+   "Hip [m]" : "1", 
+   "LR Local X" : "0.531", 
+   "LR Local Y" : "-0.901", 
+   "BPM" : "84.03", 
+   "Walk speed" : "2.2", 
+   "Rotation Speed" : "0.15", 
+   "Step Height" : "0.22", 
+   "Step Length" : "0.43", 
+   "Feet distance" : "0.04", 
+   "Walk Feet Angle" : "5", 
+   "Ground Angle" : "18"
+}

@@ -1,0 +1,18 @@
+{ 
+   "id" : "plugin#0_Miscreated.Balance", 
+   "Active" : "true", 
+   "Walking" : "true", 
+   "BPM" : "190.99", 
+   "Head Move Up/Down" : "2.8", 
+   "Other Thigh Angle" : "23", 
+   "Swing Arms" : "0.59", 
+   "Arm Angle" : "58.85", 
+   "Walk speed" : "5", 
+   "Rotation Speed" : "0.3", 
+   "Step Height" : "0.17", 
+   "Step Length" : "0.07", 
+   "Walk Feet Angle" : "-4", 
+   "Ground Angle" : "32", 
+   "Backward/Forward foot balance/grounding" : "0.2", 
+   "Walk Factor" : "0.33"
+}

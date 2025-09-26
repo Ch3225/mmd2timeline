@@ -1,0 +1,6 @@
+﻿src\Common\PoseJoints.cs
+src\Common\MiscCommon.cs
+src\Common\UIManager.cs
+src\Common\Humanoid.cs
+src\BodyHandling\MotionManager.cs
+src\BodyHandling\Floating.cs

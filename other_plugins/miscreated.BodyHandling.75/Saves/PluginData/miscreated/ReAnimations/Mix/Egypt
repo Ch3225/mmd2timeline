@@ -1,0 +1,862 @@
+{ 
+   "pluginversion" : "V2.0.2", 
+   "pluginname" : "ReAnimator", 
+   "poses" : [ 
+      { 
+         "name" : "Pose 2", 
+         "joints" : [ 
+            { 
+               "name" : "head", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "neck", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "chest", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "500"
+            }, 
+            { 
+               "name" : "abdomen", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "abdomen2", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "pelvis", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "1", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "rThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "rFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "lCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lShldr", 
+               "x" : "10.99366", 
+               "y" : "21.42603", 
+               "z" : "72.5847", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rShldr", 
+               "x" : "-26.85004", 
+               "y" : "31.16807", 
+               "z" : "-83.5831", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lForeArm", 
+               "x" : "-85.87726", 
+               "y" : "-14.04861", 
+               "z" : "-13.61359", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rForeArm", 
+               "x" : "85.87725", 
+               "y" : "-14.04861", 
+               "z" : "13.6136", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lHand", 
+               "x" : "69.48947", 
+               "y" : "61.87843", 
+               "z" : "60.29065", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "rHand", 
+               "x" : "67.73128", 
+               "y" : "-64.49445", 
+               "z" : "-102.7268", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "lowerJaw", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "30", 
+               "damper" : "5", 
+               "spring" : "30"
+            }, 
+            { 
+               "name" : "lToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }, 
+            { 
+               "name" : "rToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }
+         ], 
+         "time" : "1", 
+         "smooth" : "true"
+      }, 
+      { 
+         "name" : "Pose 4", 
+         "joints" : [ 
+            { 
+               "name" : "head", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "neck", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "chest", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "500"
+            }, 
+            { 
+               "name" : "abdomen", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "abdomen2", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "pelvis", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "1", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "rThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "rFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "lCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lShldr", 
+               "x" : "10.99366", 
+               "y" : "21.42603", 
+               "z" : "72.5847", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rShldr", 
+               "x" : "-26.85004", 
+               "y" : "31.16807", 
+               "z" : "-83.5831", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lForeArm", 
+               "x" : "-85.87726", 
+               "y" : "-14.04861", 
+               "z" : "-13.61359", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rForeArm", 
+               "x" : "85.87725", 
+               "y" : "-14.04861", 
+               "z" : "13.6136", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lHand", 
+               "x" : "69.48947", 
+               "y" : "61.87843", 
+               "z" : "60.29065", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "rHand", 
+               "x" : "67.73128", 
+               "y" : "-64.49445", 
+               "z" : "-102.7268", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "lowerJaw", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "30", 
+               "damper" : "5", 
+               "spring" : "30"
+            }, 
+            { 
+               "name" : "lToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }, 
+            { 
+               "name" : "rToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }
+         ], 
+         "time" : "0.2", 
+         "smooth" : "true"
+      }, 
+      { 
+         "name" : "Pose 1", 
+         "joints" : [ 
+            { 
+               "name" : "head", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "neck", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "chest", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "500"
+            }, 
+            { 
+               "name" : "abdomen", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "abdomen2", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "pelvis", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "1", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "rThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "rFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "lCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lShldr", 
+               "x" : "27.0501", 
+               "y" : "-31.04572", 
+               "z" : "-83.09003", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rShldr", 
+               "x" : "-11.22089", 
+               "y" : "-21.44348", 
+               "z" : "72.15043", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lForeArm", 
+               "x" : "-85.87732", 
+               "y" : "-14.04865", 
+               "z" : "13.49124", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rForeArm", 
+               "x" : "85.87725", 
+               "y" : "-14.04865", 
+               "z" : "-13.49124", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lHand", 
+               "x" : "-68.47751", 
+               "y" : "57.38538", 
+               "z" : "-55.47797", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "rHand", 
+               "x" : "-80", 
+               "y" : "-4.916684E-06", 
+               "z" : "20.99999", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "lowerJaw", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "30", 
+               "damper" : "5", 
+               "spring" : "30"
+            }, 
+            { 
+               "name" : "lToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }, 
+            { 
+               "name" : "rToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }
+         ], 
+         "time" : "1", 
+         "smooth" : "true"
+      }, 
+      { 
+         "name" : "Pose 3", 
+         "joints" : [ 
+            { 
+               "name" : "head", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "neck", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "90", 
+               "damper" : "2", 
+               "spring" : "90"
+            }, 
+            { 
+               "name" : "chest", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "500"
+            }, 
+            { 
+               "name" : "abdomen", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "abdomen2", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "2", 
+               "spring" : "1000"
+            }, 
+            { 
+               "name" : "pelvis", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "1000", 
+               "damper" : "1", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "rThigh", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "800", 
+               "damper" : "0.5", 
+               "spring" : "800"
+            }, 
+            { 
+               "name" : "lShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rShin", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "rFoot", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "100", 
+               "damper" : "0.5", 
+               "spring" : "200"
+            }, 
+            { 
+               "name" : "lCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rCollar", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "400", 
+               "damper" : "2", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lShldr", 
+               "x" : "27.0501", 
+               "y" : "-31.04572", 
+               "z" : "-83.09003", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "rShldr", 
+               "x" : "-11.22089", 
+               "y" : "-21.44348", 
+               "z" : "72.15043", 
+               "force" : "400", 
+               "damper" : "0.5", 
+               "spring" : "400"
+            }, 
+            { 
+               "name" : "lForeArm", 
+               "x" : "-85.87732", 
+               "y" : "-14.04865", 
+               "z" : "13.49124", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "rForeArm", 
+               "x" : "85.87725", 
+               "y" : "-14.04865", 
+               "z" : "-13.49124", 
+               "force" : "150", 
+               "damper" : "0.5", 
+               "spring" : "150"
+            }, 
+            { 
+               "name" : "lHand", 
+               "x" : "-63.34204", 
+               "y" : "43.53125", 
+               "z" : "-40.33185", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "rHand", 
+               "x" : "-80.00003", 
+               "y" : "-4.916684E-06", 
+               "z" : "20", 
+               "force" : "10", 
+               "damper" : "0.5", 
+               "spring" : "10"
+            }, 
+            { 
+               "name" : "lowerJaw", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "30", 
+               "damper" : "5", 
+               "spring" : "30"
+            }, 
+            { 
+               "name" : "lToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }, 
+            { 
+               "name" : "rToe", 
+               "x" : "0", 
+               "y" : "0", 
+               "z" : "0", 
+               "force" : "2", 
+               "damper" : "0.5", 
+               "spring" : "20"
+            }
+         ], 
+         "time" : "0.2", 
+         "smooth" : "true"
+      }
+   ]
+}
