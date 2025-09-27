@@ -381,6 +381,8 @@ namespace mmd2timeline
             SetupToggle(config.EnableInitialMotionAdjustment, "Enable Initial Motion Adjustment", dft.EnableInitialMotionAdjustment, (v) => config.EnableInitialMotionAdjustment = v, LeftSide);
             // 是否启用初始动作修正
             SetupToggle(config.ResetPhysicalWhenLoadMotion, "Reset Model Before Motion Start", dft.ResetPhysicalWhenLoadMotion, (v) => config.ResetPhysicalWhenLoadMotion = v, LeftSide);
+            // 是否启用Bending功能
+            SetupToggle(config.EnableBending, "Enable Bending Control", dft.EnableBending, (v) => config.EnableBending = v, LeftSide);
 
             Utils.SetupSpacer(this, 10f, LeftSide);
         }

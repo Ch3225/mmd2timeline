@@ -318,6 +318,27 @@ namespace mmd2timeline
         }
 
         /// <summary>
+        /// 是否启用Bending功能
+        /// </summary>
+        public bool EnableBending
+        {
+            get
+            {
+                if (this.HasKey("EnableBending"))
+                    return this["EnableBending"].AsBool;
+                else return false; // 默认关闭
+            }
+            set
+            {
+                if (this.EnableBending != value)
+                {
+                    this["EnableBending"].AsBool = value;
+                    this.Save();
+                }
+            }
+        }
+
+        /// <summary>
         /// 同步WindowCarmera
         /// </summary>
         public bool SyncWindowCamera
