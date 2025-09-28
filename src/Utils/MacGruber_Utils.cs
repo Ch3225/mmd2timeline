@@ -22,6 +22,8 @@ namespace MacGruber
 {
     public static class Utils
     {
+        // When true, newly created sliders will hide their numeric input field (value box)
+        public static bool HideSliderNumericInput = false;
         // VaM Plugins can contain multiple Scripts, if you load them via a *.cslist file. This function allows you to get
         // an instance of another script within the same plugin, allowing you directly interact with it by reading/writing
         // data, calling functions, etc.
@@ -112,6 +114,17 @@ namespace MacGruber
             {
                 slider.valueFormat = valueFormat;
             }
+            if (HideSliderNumericInput)
+            {
+                try
+                {
+                    if (slider != null && slider.sliderValueTextFromFloat != null && slider.sliderValueTextFromFloat.UIInputField != null)
+                    {
+                        slider.sliderValueTextFromFloat.UIInputField.gameObject.SetActive(false);
+                    }
+                }
+                catch { }
+            }
             //script.RegisterFloat(storable);
             return storable;
         }
@@ -166,6 +179,17 @@ namespace MacGruber
             {
                 slider.valueFormat = valueFormat;
             }
+            if (HideSliderNumericInput)
+            {
+                try
+                {
+                    if (slider != null && slider.sliderValueTextFromFloat != null && slider.sliderValueTextFromFloat.UIInputField != null)
+                    {
+                        slider.sliderValueTextFromFloat.UIInputField.gameObject.SetActive(false);
+                    }
+                }
+                catch { }
+            }
             //script.RegisterFloat(storable);
             return storable;
         }
@@ -178,6 +202,17 @@ namespace MacGruber
             UIDynamicSlider slider = script.CreateSlider(storable, rightSide);
             slider.slider.wholeNumbers = true;
             slider.valueFormat = "F0";
+            if (HideSliderNumericInput)
+            {
+                try
+                {
+                    if (slider != null && slider.sliderValueTextFromFloat != null && slider.sliderValueTextFromFloat.UIInputField != null)
+                    {
+                        slider.sliderValueTextFromFloat.UIInputField.gameObject.SetActive(false);
+                    }
+                }
+                catch { }
+            }
             //script.RegisterFloat(storable);
             return storable;
         }
@@ -588,6 +623,169 @@ namespace MacGruber
                 t.gameObject.SetActive(true);
                 return uid;
             }
+        }
+
+        // New: Triple button row (3 buttons in one horizontal row)
+    public static UIDynamic SetupTripleButton(MVRScript script, string label1, UnityAction cb1, string label2, UnityAction cb2, string label3, UnityAction cb3, bool? rightSide)
+        {
+            // Reuse TwinButton prefab as a template to build a 3-button row
+            if (ourTwinButtonPrefab == null)
+            {
+                // Initialize twin first so we can reuse its visual style
+                SetupTwinButton(script, "A", () => { }, "B", () => { }, rightSide);
+            }
+
+            // Create a new container with three equally spaced buttons
+            GameObject container = new GameObject("TripleButton");
+            container.SetActive(false);
+            RectTransform rt = container.AddComponent<RectTransform>();
+            rt.anchorMax = new Vector2(0, 1);
+            rt.anchorMin = new Vector2(0, 1);
+            rt.offsetMax = new Vector2(535, -500);
+            rt.offsetMin = new Vector2(10, -600);
+            LayoutElement le = container.AddComponent<LayoutElement>();
+            le.flexibleWidth = 1;
+            le.minHeight = 50;
+            le.minWidth = 350;
+            le.preferredHeight = 50;
+            le.preferredWidth = 500;
+
+            // Clone the standard button three times and position them at 1/3 each
+            RectTransform baseButtonTransform = script.manager.configurableScrollablePopupPrefab.transform.Find("Button") as RectTransform;
+
+            RectTransform b1 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b1.name = "Button1";
+            b1.anchorMax = new Vector2(1f / 3f, 1f);
+            b1.anchorMin = new Vector2(0f, 0f);
+            b1.offsetMax = new Vector2(-4, 0);
+            b1.offsetMin = new Vector2(0, 0);
+            Button btn1 = b1.GetComponent<Button>();
+            Text t1 = b1.Find("Text").GetComponent<Text>();
+
+            RectTransform b2 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b2.name = "Button2";
+            b2.anchorMax = new Vector2(2f / 3f, 1f);
+            b2.anchorMin = new Vector2(1f / 3f, 0f);
+            b2.offsetMax = new Vector2(-2, 0);
+            b2.offsetMin = new Vector2(2, 0);
+            Button btn2 = b2.GetComponent<Button>();
+            Text t2 = b2.Find("Text").GetComponent<Text>();
+
+            RectTransform b3 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b3.name = "Button3";
+            b3.anchorMax = new Vector2(1f, 1f);
+            b3.anchorMin = new Vector2(2f / 3f, 0f);
+            b3.offsetMax = new Vector2(0, 0);
+            b3.offsetMin = new Vector2(4, 0);
+            Button btn3 = b3.GetComponent<Button>();
+            Text t3 = b3.Find("Text").GetComponent<Text>();
+
+            var createUIElement = GetCreateUIElement(script);
+            Transform t = createUIElement(container.transform, rightSide);
+
+            // Set text and callbacks after creating UI element so components are properly initialized
+            var finalT1 = t.Find("Button1/Text").GetComponent<Text>();
+            var finalT2 = t.Find("Button2/Text").GetComponent<Text>();
+            var finalT3 = t.Find("Button3/Text").GetComponent<Text>();
+            var finalBtn1 = t.Find("Button1").GetComponent<Button>();
+            var finalBtn2 = t.Find("Button2").GetComponent<Button>();
+            var finalBtn3 = t.Find("Button3").GetComponent<Button>();
+            
+            finalT1.text = label1; finalBtn1.onClick.AddListener(cb1);
+            finalT2.text = label2; finalBtn2.onClick.AddListener(cb2);
+            finalT3.text = label3; finalBtn3.onClick.AddListener(cb3);
+
+            t.gameObject.SetActive(true);
+            // Add a UIDynamic component that exposes button references
+            var uid = t.gameObject.AddComponent<UIDynamicMultiButton>();
+            uid.buttons.Add(finalBtn1); uid.buttons.Add(finalBtn2); uid.buttons.Add(finalBtn3);
+            uid.labels.Add(finalT1); uid.labels.Add(finalT2); uid.labels.Add(finalT3);
+            return uid;
+        }
+
+        // New: Quad button row (4 buttons in one horizontal row)
+    public static UIDynamic SetupQuadButton(MVRScript script, string label1, UnityAction cb1, string label2, UnityAction cb2, string label3, UnityAction cb3, string label4, UnityAction cb4, bool? rightSide)
+        {
+            if (ourTwinButtonPrefab == null)
+            {
+                SetupTwinButton(script, "A", () => { }, "B", () => { }, rightSide);
+            }
+
+            GameObject container = new GameObject("QuadButton");
+            container.SetActive(false);
+            RectTransform rt = container.AddComponent<RectTransform>();
+            rt.anchorMax = new Vector2(0, 1);
+            rt.anchorMin = new Vector2(0, 1);
+            rt.offsetMax = new Vector2(535, -500);
+            rt.offsetMin = new Vector2(10, -600);
+            LayoutElement le = container.AddComponent<LayoutElement>();
+            le.flexibleWidth = 1;
+            le.minHeight = 50;
+            le.minWidth = 350;
+            le.preferredHeight = 50;
+            le.preferredWidth = 500;
+
+            RectTransform baseButtonTransform = script.manager.configurableScrollablePopupPrefab.transform.Find("Button") as RectTransform;
+
+            RectTransform b1 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b1.name = "Button1";
+            b1.anchorMax = new Vector2(0.25f, 1f);
+            b1.anchorMin = new Vector2(0f, 0f);
+            b1.offsetMax = new Vector2(-3, 0);
+            b1.offsetMin = new Vector2(0, 0);
+
+            RectTransform b2 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b2.name = "Button2";
+            b2.anchorMax = new Vector2(0.5f, 1f);
+            b2.anchorMin = new Vector2(0.25f, 0f);
+            b2.offsetMax = new Vector2(-2, 0);
+            b2.offsetMin = new Vector2(2, 0);
+
+            RectTransform b3 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b3.name = "Button3";
+            b3.anchorMax = new Vector2(0.75f, 1f);
+            b3.anchorMin = new Vector2(0.5f, 0f);
+            b3.offsetMax = new Vector2(-2, 0);
+            b3.offsetMin = new Vector2(2, 0);
+
+            RectTransform b4 = UnityEngine.Object.Instantiate(baseButtonTransform, container.transform);
+            b4.name = "Button4";
+            b4.anchorMax = new Vector2(1f, 1f);
+            b4.anchorMin = new Vector2(0.75f, 0f);
+            b4.offsetMax = new Vector2(0, 0);
+            b4.offsetMin = new Vector2(3, 0);
+
+            var createUIElement = GetCreateUIElement(script);
+            Transform t = createUIElement(container.transform, rightSide);
+
+            // Set text and callbacks after creating UI element so components are properly initialized
+            var finalT1 = t.Find("Button1/Text").GetComponent<Text>();
+            var finalT2 = t.Find("Button2/Text").GetComponent<Text>();
+            var finalT3 = t.Find("Button3/Text").GetComponent<Text>();
+            var finalT4 = t.Find("Button4/Text").GetComponent<Text>();
+            var finalBtn1 = t.Find("Button1").GetComponent<Button>();
+            var finalBtn2 = t.Find("Button2").GetComponent<Button>();
+            var finalBtn3 = t.Find("Button3").GetComponent<Button>();
+            var finalBtn4 = t.Find("Button4").GetComponent<Button>();
+            
+            finalT1.text = label1; finalBtn1.onClick.AddListener(cb1);
+            finalT2.text = label2; finalBtn2.onClick.AddListener(cb2);
+            finalT3.text = label3; finalBtn3.onClick.AddListener(cb3);
+            finalT4.text = label4; finalBtn4.onClick.AddListener(cb4);
+
+            t.gameObject.SetActive(true);
+            // Add a UIDynamic component that exposes button references
+            var uid = t.gameObject.AddComponent<UIDynamicMultiButton>();
+            uid.buttons.Add(finalBtn1); uid.buttons.Add(finalBtn2); uid.buttons.Add(finalBtn3); uid.buttons.Add(finalBtn4);
+            uid.labels.Add(finalT1); uid.labels.Add(finalT2); uid.labels.Add(finalT3); uid.labels.Add(finalT4);
+            return uid;
+        }
+
+        // A helper UIDynamic that exposes internal buttons/labels for multi-button rows
+        public class UIDynamicMultiButton : UIDynamic
+        {
+            public readonly List<Button> buttons = new List<Button>();
+            public readonly List<Text> labels = new List<Text>();
         }
 
         public static UIDynamicTwinToggle SetupTwinToggle(MVRScript script, string leftLabel, UnityAction leftCallback, string rightLabel, UnityAction rightCallback, bool? rightSide)

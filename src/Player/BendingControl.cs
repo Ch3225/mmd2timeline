@@ -10,7 +10,9 @@ namespace mmd2timeline
     {
         readonly List<object> _rootElements = new List<object>();
         readonly List<object> _sliderElements = new List<object>();
-        readonly List<UIDynamicButton> _bodyPartButtons = new List<UIDynamicButton>();
+    readonly List<UIDynamicButton> _bodyPartButtons = new List<UIDynamicButton>();
+    // Map from button label to its actual Button component for precise highlighting
+    readonly Dictionary<string, UnityEngine.UI.Button> _buttonByLabel = new Dictionary<string, UnityEngine.UI.Button>(StringComparer.OrdinalIgnoreCase);
 
         string _selectedBodyPart = string.Empty;
         bool _lastEnableState;
@@ -21,6 +23,7 @@ namespace mmd2timeline
         
         // 总控制相关
         JSONStorableFloat _totalMultiplier;
+        JSONStorableBool _symmetricControl;  // 对称控制开关
         readonly Dictionary<string, List<JSONStorableFloat>> _bodyPartSliders = new Dictionary<string, List<JSONStorableFloat>>();
 
         public override bool ShouldIgnore()
@@ -142,58 +145,127 @@ namespace mmd2timeline
 
         void CreateBodyPartButtons()
         {
-            // 更新按钮布局，匹配参考插件的左右对称结构
-            string[] bodyParts =
+            // 严格按照截图逐行布局
+            // 第1行: Jaw  Head  Tongue  (三按钮)
+            var row1 = Utils.SetupTripleButton(
+                this,
+                "Jaw", () => OnBodyPartSelected("Jaw"),
+                "Head", () => OnBodyPartSelected("Head"),
+                "Tongue", () => OnBodyPartSelected("Tongue"),
+                LeftSide
+            );
+            _rootElements.Add(row1);
+            RegisterButtonsFromRow(row1, new []{"Jaw","Head","Tongue"});
+            // 第2行: Arm  Collar  Collar  Arm  (四按钮)
+            var row2 = Utils.SetupQuadButton(
+                this,
+                "Arm", () => OnBodyPartSelected("L.Arm"),
+                "Collar", () => OnBodyPartSelected("L.Collar"),
+                "Collar", () => OnBodyPartSelected("R.Collar"),
+                "Arm", () => OnBodyPartSelected("R.Arm"),
+                LeftSide
+            );
+            _rootElements.Add(row2);
+            RegisterButtonsFromRow(row2, new []{"L.Arm","L.Collar","R.Collar","R.Arm"});
+            // 第3行: Elbow  Spine  Elbow
+            var row3 = Utils.SetupTripleButton(
+                this,
+                "Elbow", () => OnBodyPartSelected("L.Elbow"),
+                "Spine", () => OnBodyPartSelected("Spine"),
+                "Elbow", () => OnBodyPartSelected("R.Elbow"),
+                LeftSide
+            );
+            _rootElements.Add(row3);
+            RegisterButtonsFromRow(row3, new []{"L.Elbow","Spine","R.Elbow"});
+            // 第4行: Chest  Abd L  Abd H  Pelvis
+            var row4 = Utils.SetupQuadButton(
+                this,
+                "Chest", () => OnBodyPartSelected("Chest"),
+                "Abd L", () => OnBodyPartSelected("Abd L"),
+                "Abd H", () => OnBodyPartSelected("Abd H"),
+                "Pelvis", () => OnBodyPartSelected("Pelvis"),
+                LeftSide
+            );
+            _rootElements.Add(row4);
+            RegisterButtonsFromRow(row4, new []{"Chest","Abd L","Abd H","Pelvis"});
+            // 第5行: Hand  Thigh  Thigh  Hand
+            var row5 = Utils.SetupQuadButton(
+                this,
+                "Hand", () => OnBodyPartSelected("L.Hand"),
+                "Thigh", () => OnBodyPartSelected("L.Thigh"),
+                "Thigh", () => OnBodyPartSelected("R.Thigh"),
+                "Hand", () => OnBodyPartSelected("R.Hand"),
+                LeftSide
+            );
+            _rootElements.Add(row5);
+            RegisterButtonsFromRow(row5, new []{"L.Hand","L.Thigh","R.Thigh","R.Hand"});
+            // 第6行: Fingers  Penis  Fingers
+            var row6 = Utils.SetupTripleButton(
+                this,
+                "Fingers", () => OnBodyPartSelected("L.Fingers"),
+                "Penis", () => OnBodyPartSelected("Penis"),
+                "Fingers", () => OnBodyPartSelected("R.Fingers"),
+                LeftSide
+            );
+            _rootElements.Add(row6);
+            RegisterButtonsFromRow(row6, new []{"L.Fingers","Penis","R.Fingers"});
+            // 第7行: Knee  Knee
+            AddTwinRow("L.Knee", "R.Knee");
+            // 第8行: Toe  Foot  Foot  Toe
+            var row8 = Utils.SetupQuadButton(
+                this,
+                "Toe", () => OnBodyPartSelected("L.Toe"),
+                "Foot", () => OnBodyPartSelected("L.Foot"),
+                "Foot", () => OnBodyPartSelected("R.Foot"),
+                "Toe", () => OnBodyPartSelected("R.Toe"),
+                LeftSide
+            );
+            _rootElements.Add(row8);
+            RegisterButtonsFromRow(row8, new []{"L.Toe","L.Foot","R.Foot","R.Toe"});
+            // 第9行: Toes  Toes
+            AddTwinRow("L.Toe", "R.Toe");
+            
+            // 将总控制移到左侧底部
+            CreateTotalControlOnLeft();
+        }
+
+        // 兼容旧版 C#（不支持本地函数），抽成类级方法
+        void AddTwinRow(string left, string right)
+        {
+            var twin = Utils.SetupTwinButton(
+                this,
+                string.IsNullOrEmpty(left) ? "" : left,
+                () => { if (!string.IsNullOrEmpty(left)) OnBodyPartSelected(left); },
+                string.IsNullOrEmpty(right) ? "" : right,
+                () => { if (!string.IsNullOrEmpty(right)) OnBodyPartSelected(right); },
+                LeftSide
+            );
+            _rootElements.Add(twin);
+            // capture labels and buttons
+            var tb = twin as UIDynamicTwinButton;
+            if (tb != null)
             {
-                "Head", "Head", "Head",           // 头部居中
-                "L.Collar", "Spine", "R.Collar",  // 肩膀左右对称 
-                "L.Arm", "Chest", "R.Arm",        // 手臂左右对称
-                "L.Elbow", "Pelvis", "R.Elbow",   // 肘部左右对称
-                "L.Hand", "Abd", "R.Hand",        // 手部左右对称
-                "", "", "",                       // 空行
-                "L.Thigh", "Hip", "R.Thigh",      // 大腿左右对称
-                "L.Knee", "", "R.Knee",           // 膝盖左右对称
-                "L.Foot", "", "R.Foot",           // 脚部左右对称
-                "L.Toe", "", "R.Toe"              // 脚趾左右对称
-            };
+                if (!string.IsNullOrEmpty(left)) _buttonByLabel[left] = tb.buttonLeft;
+                if (!string.IsNullOrEmpty(right)) _buttonByLabel[right] = tb.buttonRight;
+            }
+        }
 
-            int buttonsPerRow = 3;
-            int currentButton = 0;
-
-            foreach (string part in bodyParts)
+        void RegisterButtonsFromRow(UIDynamic row, string[] logicalLabels)
+        {
+            var multi = row as MacGruber.Utils.UIDynamicMultiButton;
+            if (multi == null || multi.buttons == null) return;
+            for (int i = 0; i < logicalLabels.Length && i < multi.buttons.Count; i++)
             {
-                if (string.IsNullOrEmpty(part))
+                var key = logicalLabels[i];
+                if (!string.IsNullOrEmpty(key))
                 {
-                    // 创建空间占位符
-                    var spacer = Utils.SetupSpacer(this, 45f, LeftSide);
-                    _rootElements.Add(spacer);
-                }
-                else
-                {
-                    var button = Utils.SetupButton(this, part, () => OnBodyPartSelected(part), LeftSide);
-                    button.height = 40f;
-                    button.buttonColor = part == _selectedBodyPart ? Color.green : Color.white;
-
-                    _bodyPartButtons.Add(button);
-                    _rootElements.Add(button);
-                }
-
-                currentButton++;
-                
-                // 每行结束后添加行间距
-                if (currentButton % buttonsPerRow == 0)
-                {
-                    var rowSpacer = Utils.SetupSpacer(this, 5f, LeftSide);
-                    _rootElements.Add(rowSpacer);
+                    _buttonByLabel[key] = multi.buttons[i];
                 }
             }
         }
 
         void CreateSliderArea()
         {
-            // 创建总控制滑块（在右上角）
-            CreateTotalControlSlider();
-            
             _rightTitle = Utils.SetupInfoTextNoScroll(this, "Bend Controls (Select a body part)", 30f, RightSide);
             _rootElements.Add(_rightTitle);
 
@@ -206,31 +278,68 @@ namespace mmd2timeline
             ResetRightPanelLabels(_selectedBodyPart);
         }
         
-        void CreateTotalControlSlider()
+        void CreateTotalControlOnLeft()
         {
+            // 分隔符
+            var spacer1 = Utils.SetupSpacer(this, 10f, LeftSide);
+            _rootElements.Add(spacer1);
+            
             // 总控制标题
-            var totalTitle = Utils.SetupInfoOneLine(this, "总控制 (Total Control)", RightSide);
+            var totalTitle = Utils.SetupInfoOneLine(this, "总控制 (Total Control)", LeftSide);
             _rootElements.Add(totalTitle);
             
+            // 对称控制开关
+            _symmetricControl = Utils.SetupToggle(this, "Symmetric Control", false, LeftSide);
+            _symmetricControl.setCallbackFunction += OnSymmetricControlChanged;
+            RegisterBool(_symmetricControl);
+            _rootElements.Add(_symmetricControl);
+            
             // 总控制倍数滑块 (最大15倍)
-            _totalMultiplier = Utils.SetupSliderFloat(this, "Total Multiplier", 1.0f, 0.0f, 15.0f, RightSide, "F1");
+            _totalMultiplier = Utils.SetupSliderFloat(this, "Total Multiplier", 1.0f, 0.0f, 15.0f, LeftSide, "F1");
             _totalMultiplier.setCallbackFunction += OnTotalMultiplierChanged;
             RegisterFloat(_totalMultiplier);
             _rootElements.Add(_totalMultiplier);
-            
-            // 分隔符
-            var spacer = Utils.SetupSpacer(this, 15f, RightSide);
-            _rootElements.Add(spacer);
+        }
+        
+        void OnSymmetricControlChanged(bool isSymmetric)
+        {
+            // 对称控制开关状态改变时的处理
+            LogUtil.Debug($"对称控制: {(isSymmetric ? "启用" : "禁用")}");
+            UpdateButtonHighlights();
         }
         
         void OnTotalMultiplierChanged(float multiplier)
         {
-            // 应用总倍数到当前显示的滑块
+            // 重新应用所有滑块值，使用新的倍数
             if (!string.IsNullOrEmpty(_selectedBodyPart) && _bodyPartSliders.ContainsKey(_selectedBodyPart))
             {
-                ApplyTotalMultiplier(multiplier);
+                var sliders = _bodyPartSliders[_selectedBodyPart];
+                foreach (var slider in sliders)
+                {
+                    if (slider.name.EndsWith("Strength"))
+                    {
+                        OnSliderChanged(_selectedBodyPart, "Strength", slider.val);
+                    }
+                    // 对于轴向滑块，重新触发轴向控制
+                    var bodyPartMapping = BodyPartControlMapping.GetBodyPartMapping();
+                    var mappingKey = GetBodyPartMappingKey(_selectedBodyPart);
+                    if (!string.IsNullOrEmpty(mappingKey) && bodyPartMapping.ContainsKey(mappingKey))
+                    {
+                        var partControls = bodyPartMapping[mappingKey];
+                        foreach (var axis in partControls.Axes)
+                        {
+                            if (slider.name.Contains(axis.Label))
+                            {
+                                OnNewAxisSliderChanged(mappingKey, axis, slider.val);
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
+        
+
         
         void ApplyTotalMultiplier(float totalMultiplier)
         {
@@ -641,13 +750,44 @@ namespace mmd2timeline
         void OnBodyPartSelected(string bodyPart)
         {
             _selectedBodyPart = bodyPart;
-
-            foreach (var button in _bodyPartButtons)
+            UpdateButtonHighlights();
+            CreateSlidersForBodyPart(bodyPart);
+        }
+        
+        void UpdateButtonHighlights()
+        {
+            // 高亮选中的按钮和对称按钮
+            // 重置所有按钮颜色
+            foreach (var kv in _buttonByLabel)
             {
-                button.buttonColor = button.label == bodyPart ? Color.green : Color.white;
+                if (kv.Value != null)
+                {
+                    var colors = kv.Value.colors;
+                    // NormalColor 不能直接设置，这里通过目标图像颜色
+                    var img = kv.Value.targetGraphic as UnityEngine.UI.Graphic;
+                    if (img != null) img.color = Color.white;
+                }
             }
 
-            CreateSlidersForBodyPart(bodyPart);
+            // 高亮当前选中
+            UnityEngine.UI.Button btn;
+            if (!string.IsNullOrEmpty(_selectedBodyPart) && _buttonByLabel.TryGetValue(_selectedBodyPart, out btn))
+            {
+                var img = btn?.targetGraphic as UnityEngine.UI.Graphic;
+                if (img != null) img.color = Color.green;
+            }
+
+            // 高亮对称
+            if (_symmetricControl?.val == true && !string.IsNullOrEmpty(_selectedBodyPart))
+            {
+                var symmetricPart = GetSymmetricBodyPart(_selectedBodyPart);
+                UnityEngine.UI.Button sbtn;
+                if (!string.IsNullOrEmpty(symmetricPart) && _buttonByLabel.TryGetValue(symmetricPart, out sbtn))
+                {
+                    var img = sbtn?.targetGraphic as UnityEngine.UI.Graphic;
+                    if (img != null) img.color = Color.green;
+                }
+            }
         }
 
         void CreateSlidersForBodyPart(string bodyPart)
@@ -659,6 +799,10 @@ namespace mmd2timeline
             {
                 return;
             }
+
+            // 右侧暂不需要数值输入框，隐藏它
+            bool prevHide = MacGruber.Utils.HideSliderNumericInput;
+            MacGruber.Utils.HideSliderNumericInput = true;
 
             // 使用新的身体部位控制映射
             var bodyPartMapping = BodyPartControlMapping.GetBodyPartMapping();
@@ -692,12 +836,9 @@ namespace mmd2timeline
             }
             else
             {
-                // 回退到简单的Bend控制
-                var bendSlider = Utils.SetupSliderFloat(this, $"{bodyPart} Bend", 0f, -100f, 100f, RightSide, "F1");
-                bendSlider.setCallbackFunction += (value) => OnSliderChanged(bodyPart, "Bend", value);
-                RegisterFloat(bendSlider);
-                _sliderElements.Add(bendSlider);
-                sliders.Add(bendSlider);
+                // 未实现的部位或未映射，显示提示
+                var info = Utils.SetupInfoTextNoScroll(this, $"{bodyPart} 暂无可用的轴向控制", 30f, RightSide);
+                _sliderElements.Add(info);
             }
             
             // 添加强度控制滑块
@@ -711,6 +852,9 @@ namespace mmd2timeline
             _sliderElements.Add(finalSpacer);
 
             _bodyPartSliders[bodyPart] = sliders;
+
+            // 恢复全局设置（避免影响其他页面）
+            MacGruber.Utils.HideSliderNumericInput = prevHide;
         }
         
         // 映射UI显示名称到内部控制键
@@ -718,32 +862,51 @@ namespace mmd2timeline
         {
             switch (displayName.ToLower())
             {
-                case "head": return "head";
-                case "spine": return "chest";
-                case "chest": return "chest";
-                case "pelvis": return "pelvis";
-                case "abd": return "pelvis";
-                case "hip": return "pelvis";
+                // 中央/非对称部位
+                case "head": return "Head";
+                case "spine": return "Spine";
+                case "chest": return "Chest";
+                case "pelvis": return "Pelvis";
+                case "abd": return "Abd";
+                case "abd l": return "Abd L";
+                case "abd h": return "Abd H";
+                case "hip": return "Pelvis";
+                case "jaw": return "Jaw";
+                case "tongue": return "Tongue";
                 
                 // 左侧部位
-                case "l.collar": return "lCollar";
-                case "l.arm": return "lShldr";
-                case "l.elbow": return "lForeArm";
-                case "l.hand": return "lHand";
-                case "l.thigh": return "lThigh";
-                case "l.knee": return "lShin";
-                case "l.foot": return "lFoot";
-                case "l.toe": return "lToe";
+                case "l.collar": return "L.Collar";
+                case "l.arm": return "L.Arm";
+                case "l.elbow": return "L.Elbow";
+                case "l.hand": return "L.Hand";
+                case "l.thigh": return "L.Thigh";
+                case "l.knee": return "L.Knee";
+                case "l.foot": return "L.Foot";
+                case "l.toe": return "L.Toe";
                 
                 // 右侧部位
-                case "r.collar": return "rCollar";
-                case "r.arm": return "rShldr";
-                case "r.elbow": return "rForeArm";
-                case "r.hand": return "rHand";
-                case "r.thigh": return "rThigh";
-                case "r.knee": return "rShin";
-                case "r.foot": return "rFoot";
-                case "r.toe": return "rToe";
+                case "r.collar": return "R.Collar";
+                case "r.arm": return "R.Arm";
+                case "r.elbow": return "R.Elbow";
+                case "r.hand": return "R.Hand";
+                case "r.thigh": return "R.Thigh";
+                case "r.knee": return "R.Knee";
+                case "r.foot": return "R.Foot";
+                case "r.toe": return "R.Toe";
+                
+                // 通用映射（不区分左右）
+                case "knee": case "l knee": return "L.Knee";
+                case "r knee": return "R.Knee";
+                case "hand": case "l hand": return "L.Hand";
+                case "r hand": return "R.Hand";
+                case "l toe": return "L.Toe";
+                case "r toe": return "R.Toe";
+                
+                // 通用/复数形式
+                case "toes": return "Toes";
+                case "toe": return "Toe";
+                case "foot": return "Foot";
+                case "thigh": return "Thigh";
                 
                 default: return null;
             }
@@ -759,11 +922,78 @@ namespace mmd2timeline
                 
                 // 直接控制关节
                 ApplyDirectJointControl(bodyPartKey, axis.Axis, finalValue, totalMultiplier);
+                
+                // 对称控制逻辑
+                if (_symmetricControl?.val == true)
+                {
+                    ApplySymmetricControl(bodyPartKey, axis, value, totalMultiplier);
+                }
             }
             catch (Exception ex)
             {
                 LogUtil.LogError(ex, $"OnNewAxisSliderChanged: {bodyPartKey} {axis.Label}");
             }
+        }
+        
+        // 对称控制方法
+        void ApplySymmetricControl(string bodyPartKey, BodyPartControlMapping.ControlAxis axis, float value, float totalMultiplier)
+        {
+            try
+            {
+                string symmetricPartKey = GetSymmetricBodyPart(bodyPartKey);
+                if (string.IsNullOrEmpty(symmetricPartKey)) return;
+
+                // 获取对称部位的映射
+                var mapping = BodyPartControlMapping.GetBodyPartMapping();
+                if (!mapping.ContainsKey(symmetricPartKey)) return;
+
+                var symmetricControls = mapping[symmetricPartKey];
+                var symmetricAxis = symmetricControls.Axes.FirstOrDefault(a => a.Axis == axis.Axis);
+                if (symmetricAxis == null) return;
+
+                // 应用对称值（考虑对称部位的Neg乘数）
+                var symmetricValue = value * symmetricAxis.Neg;
+                ApplyDirectJointControl(symmetricPartKey, axis.Axis, symmetricValue, totalMultiplier);
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogError(ex, $"ApplySymmetricControl: {bodyPartKey}");
+            }
+        }
+        
+        // 获取对称身体部位
+        string GetSymmetricBodyPart(string bodyPart)
+        {
+            if (string.IsNullOrEmpty(bodyPart)) return null;
+
+            // 标准化前缀（支持多种大小写/格式）
+            var normalized = bodyPart.Trim();
+            if (normalized.StartsWith("L.", StringComparison.OrdinalIgnoreCase))
+                return normalized.Replace("L.", "R.");
+            if (normalized.StartsWith("R.", StringComparison.OrdinalIgnoreCase))
+                return normalized.Replace("R.", "L.");
+
+            // 支持常见无前缀的名称或不同大小写
+            switch (normalized.ToLower())
+            {
+                case "r.knee": return "L.Knee";
+                case "l.hand": return "R.Hand";
+                case "r.hand": return "L.Hand";
+                case "l.arm": return "R.Arm";
+                case "r.arm": return "L.Arm";
+                case "l.thigh": return "R.Thigh";
+                case "r.thigh": return "L.Thigh";
+                case "l.foot": return "R.Foot";
+                case "r.foot": return "L.Foot";
+                case "l.toe": return "R.Toe";
+                case "r.toe": return "L.Toe";
+                // 通用名
+                case "l.knee":
+                case "knee":
+                    return "R.Knee";
+            }
+
+            return null; // 非对称部位返回 null
         }
         
         // 直接关节控制方法 - 基于参考插件的实现
@@ -784,12 +1014,14 @@ namespace mmd2timeline
                     var controller = person.GetStorableByID(controllerName) as FreeControllerV3;
                     if (controller == null) continue;
 
-                    // 关键：设置足够的驱动力
-                    controller.jointRotationDriveSpring = 10000f;
-                    controller.jointRotationDriveMaxForce = 10000f;
-                    controller.jointRotationDriveDamper = 0f;
+                    // 关键：使用倍数调节刚度，而不是放大角度
+                    float baseStiffness = 200f;
+                    float spring = Mathf.Clamp(baseStiffness * Mathf.Max(0.1f, multiplier), 50f, 1500f);
+                    controller.jointRotationDriveSpring = spring;
+                    controller.jointRotationDriveMaxForce = spring;
+                    controller.jointRotationDriveDamper = 1f;
 
-                    var finalValue = value * multiplier;
+                    var finalValue = value; // 角度直接使用滑块值（度）
                     
                     // 直接设置目标旋转
                     switch (axis.ToUpper())
@@ -817,6 +1049,57 @@ namespace mmd2timeline
         {
             switch (bodyPartKey)
             {
+                // 头部和面部
+                case "Head": return "headControl";
+                case "Jaw": return "jawControl";
+                case "Tongue": return "tongueControl";
+                case "Abd L": return "abdomenControl";
+                case "Abd H": return "abdomen2Control";
+                
+                // 肩膀和锁骨
+                case "L.Collar": return "lShoulderControl";
+                case "R.Collar": return "rShoulderControl";
+                
+                // 手臂
+                case "L.Arm": return "lArmControl";
+                case "R.Arm": return "rArmControl";
+                
+                // 肘部
+                case "L.Elbow": return "lElbowControl";
+                case "R.Elbow": return "rElbowControl";
+                
+                // 手部
+                case "L.Hand": return "lHandControl";
+                case "R.Hand": return "rHandControl";
+                
+                // 躯干
+                case "Spine": return "chestControl";
+                case "Chest": return "chestControl";
+                case "Abd": return "abdomenControl";
+                case "Pelvis": return "pelvisControl";
+                
+                // 大腿
+                case "L.Thigh": return "lThighControl";
+                case "R.Thigh": return "rThighControl";
+                case "Thigh": return "lThighControl"; // 通用大腿
+                
+                // 膝盖
+                case "L.Knee": return "lKneeControl";
+                case "R.Knee": return "rKneeControl";
+                case "Knee": return "lKneeControl"; // 通用膝盖
+                
+                // 脚部
+                case "L.Foot": return "lFootControl";
+                case "R.Foot": return "rFootControl";
+                case "Foot": return "lFootControl"; // 通用脚部
+                
+                // 脚趾
+                case "L.Toe": return "lToeControl";
+                case "R.Toe": return "rToeControl";
+                case "Toe": return "lToeControl"; // 通用脚趾
+                case "Toes": return "lToeControl"; // Toes 也映射到左脚趾控制器
+                
+                // 旧的映射保持兼容性
                 case "head": return "headControl";
                 case "lCollar": return "lShoulderControl";
                 case "rCollar": return "rShoulderControl";
@@ -834,6 +1117,7 @@ namespace mmd2timeline
                 case "rFoot": return "rFootControl";
                 case "lToe": return "lToeControl";
                 case "rToe": return "rToeControl";
+                
                 default: return null;
             }
         }
@@ -909,47 +1193,12 @@ namespace mmd2timeline
                 case "knee":
                     axes.Add(new ReferenceAxis { Label = "Bend ↔ Straight", Axis = "X", Min = -150f, Max = 11f, Default = 0f });
                     break;
-                case "toe":
-                case "toes":
-                    axes.Add(new ReferenceAxis { Label = "Down ↔ Up", Axis = "X", Min = -65f, Max = 75f, Default = 0f });
-                    break;
             }
-            
+
+            // 结束 switch，并返回构建的轴列表
             return axes;
         }
-        
-        void OnAxisSliderChanged(string bodyPart, string axisLabel, string axis, float sliderValue)
-        {
-            try
-            {
-                // 获取当前总倍数
-                float totalMultiplier = _totalMultiplier?.val ?? 1.0f;
-                
-                // 基于已知工作的ApplyJointControl逻辑，创建轴向特定的JointMapping
-                var jointMappings = GetJointMappings(bodyPart);
-                if (jointMappings != null && jointMappings.Count > 0)
-                {
-                    // 为每个关节映射设置轴向和值
-                    foreach (var mapping in jointMappings)
-                    {
-                        // 临时修改映射的轴向以应用特定轴向控制
-                        var originalAxis = mapping.primaryAxis;
-                        mapping.primaryAxis = axis;
-                        
-                        // 使用已知工作的ApplyJointControl逻辑
-                        ApplyJointControl(bodyPart, "AxisBend", sliderValue, totalMultiplier, mapping);
-                        
-                        // 恢复原始轴向
-                        mapping.primaryAxis = originalAxis;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                LogUtil.LogError(ex, $"OnAxisSliderChanged: {bodyPart} {axisLabel}");
-            }
-        }
-        
+
         void OnSliderChanged(string bodyPart, string controlType, float sliderValue)
         {
             try
@@ -957,12 +1206,59 @@ namespace mmd2timeline
                 // 获取当前总倍数
                 float totalMultiplier = _totalMultiplier?.val ?? 1.0f;
                 
-                // 应用滑块值到关节控制
-                ApplyJointControl(bodyPart, controlType, sliderValue, totalMultiplier);
+                if (controlType == "Strength")
+                {
+                    // Strength控制：使用新的直接控制方法
+                    ApplyStrengthDirectly(bodyPart, sliderValue, totalMultiplier);
+                }
+                else
+                {
+                    // 其他控制：使用传统映射方法
+                    ApplyJointControl(bodyPart, controlType, sliderValue, totalMultiplier);
+                }
             }
             catch (Exception ex)
             {
                 LogUtil.LogError(ex, $"OnSliderChanged: {bodyPart} {controlType}");
+            }
+        }
+        
+        void ApplyStrengthDirectly(string bodyPart, float strengthValue, float multiplier)
+        {
+            try
+            {
+                var persons = GetTargetPersonAtoms().ToList();
+                if (persons.Count == 0) return;
+
+                foreach (var person in persons)
+                {
+                    if (person == null || person.type != "Person") continue;
+
+                    var controllerName = GetControllerNameFromBodyPart(bodyPart);
+                    if (string.IsNullOrEmpty(controllerName)) continue;
+
+                    var controller = person.GetStorableByID(controllerName) as FreeControllerV3;
+                    if (controller == null) continue;
+
+                    // 应用强度控制
+                    float finalStrength = Mathf.Clamp(strengthValue * multiplier, 0f, 1000f);
+                    controller.jointRotationDriveSpring = finalStrength;
+                    controller.jointRotationDriveMaxForce = finalStrength;
+
+                    // 同步更新底层关节（如果存在），确保物理驱动也反映强度
+                    var joint = controller.GetComponent<ConfigurableJoint>();
+                    if (joint != null)
+                    {
+                        var drive = joint.slerpDrive;
+                        drive.positionSpring = Mathf.Clamp(finalStrength, 0f, 1000f);
+                        drive.maximumForce = Mathf.Clamp(finalStrength, 0f, 1000f);
+                        joint.slerpDrive = drive;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogError(ex, $"ApplyStrengthDirectly: {bodyPart}");
             }
         }
 
@@ -999,6 +1295,7 @@ namespace mmd2timeline
             BaseScript.RemoveUIElements(this, _sliderElements);
             BaseScript.RemoveUIElements(this, _rootElements);
             _bodyPartButtons.Clear();
+            _buttonByLabel.Clear();
             _bodyPartSliders.Clear();
             _rightTitle = null;
             _rightHint = null;
