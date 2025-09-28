@@ -253,13 +253,16 @@ namespace mmd2timeline
             }
         }
         
-        // 基于插件架构的关节控制方法
-        void ApplyJointControl(string bodyPart, string controlType, float value, float multiplier)
+        // 基于插件架构的关节控制方法（重载版本支持特定映射）
+        void ApplyJointControl(string bodyPart, string controlType, float value, float multiplier, JointMapping specificMapping = null)
         {
             try
             {
-                // 获取一个或多个关节映射（支持左右两侧通用部位，如 Arm/Elbow/Hand）
-                var jointMappings = GetJointMappings(bodyPart);
+                // 如果提供了特定映射，使用它；否则获取默认映射
+                var jointMappings = specificMapping != null 
+                    ? new List<JointMapping> { specificMapping } 
+                    : GetJointMappings(bodyPart);
+                    
                 if (jointMappings == null || jointMappings.Count == 0)
                 {
                     LogUtil.Log($"No joint mapping found for body part: {bodyPart}");
@@ -295,7 +298,7 @@ namespace mmd2timeline
                             var controller = person.GetStorableByID(controllerName) as FreeControllerV3;
                             if (controller != null)
                             {
-                                if (controlType == "Bend")
+                                if (controlType == "Bend" || controlType == "AxisBend")
                                 {
                                     ApplyBendingControl(controller, jointMapping, value * multiplier);
                                 }
@@ -309,7 +312,7 @@ namespace mmd2timeline
                         if (allJoints.ContainsKey(jointMapping.jointKey))
                         {
                             var joint = allJoints[jointMapping.jointKey];
-                            if (controlType == "Bend")
+                            if (controlType == "Bend" || controlType == "AxisBend")
                             {
                                 ApplyJointBending(joint, jointMapping, value * multiplier);
                             }
@@ -325,6 +328,12 @@ namespace mmd2timeline
             {
                 LogUtil.LogError(ex, $"ApplyJointControl: {bodyPart} {controlType}");
             }
+        }
+        
+        // 基于插件架构的关节控制方法（原始版本）
+        void ApplyJointControl(string bodyPart, string controlType, float value, float multiplier)
+        {
+            ApplyJointControl(bodyPart, controlType, value, multiplier, null);
         }
 
         void ApplyBendingControl(FreeControllerV3 controller, JointMapping mapping, float bendValue)
@@ -611,26 +620,169 @@ namespace mmd2timeline
                 return;
             }
 
+            // 尝试使用参考插件的多轴控制
+            var referenceAxes = GetReferencePluginAxes(bodyPart);
+            
             // 创建该身体部位的滑块列表
             var sliders = new List<JSONStorableFloat>();
 
-            var bendSlider = Utils.SetupSliderFloat(this, $"{bodyPart} Bend", 0f, -100f, 100f, RightSide, "F1");
-            bendSlider.setCallbackFunction += (value) => OnSliderChanged(bodyPart, "Bend", value);
-            RegisterFloat(bendSlider);
-            _sliderElements.Add(bendSlider);
-            sliders.Add(bendSlider);
-
+            if (referenceAxes != null && referenceAxes.Count > 0)
+            {
+                // 使用参考插件的多轴控制
+                foreach (var axis in referenceAxes)
+                {
+                    var slider = Utils.SetupSliderFloat(this, 
+                        $"{bodyPart} {axis.Label}", 
+                        axis.Default, 
+                        axis.Min, 
+                        axis.Max, 
+                        RightSide, 
+                        "F1");
+                        
+                    slider.setCallbackFunction += (value) => OnAxisSliderChanged(bodyPart, axis.Label, axis.Axis, value);
+                    RegisterFloat(slider);
+                    _sliderElements.Add(slider);
+                    sliders.Add(slider);
+                    
+                    // 在每个滑块后添加小间距
+                    var spacer = Utils.SetupSpacer(this, 5f, RightSide);
+                    _sliderElements.Add(spacer);
+                }
+            }
+            else
+            {
+                // 回退到简单的Bend控制（已知工作）
+                var bendSlider = Utils.SetupSliderFloat(this, $"{bodyPart} Bend", 0f, -100f, 100f, RightSide, "F1");
+                bendSlider.setCallbackFunction += (value) => OnSliderChanged(bodyPart, "Bend", value);
+                RegisterFloat(bendSlider);
+                _sliderElements.Add(bendSlider);
+                sliders.Add(bendSlider);
+            }
+            
+            // 添加强度控制滑块（通用且已知工作）
             var strengthSlider = Utils.SetupSliderFloat(this, $"{bodyPart} Strength", 50f, 0f, 100f, RightSide, "F1");
             strengthSlider.setCallbackFunction += (value) => OnSliderChanged(bodyPart, "Strength", value);
             RegisterFloat(strengthSlider);
             _sliderElements.Add(strengthSlider);
             sliders.Add(strengthSlider);
 
-            var spacer = Utils.SetupSpacer(this, 10f, RightSide);
-            _sliderElements.Add(spacer);
+            var finalSpacer = Utils.SetupSpacer(this, 10f, RightSide);
+            _sliderElements.Add(finalSpacer);
 
             // 存储滑块引用
             _bodyPartSliders[bodyPart] = sliders;
+        }
+        
+        // 基于参考插件的轴控制定义
+        class ReferenceAxis
+        {
+            public string Label;
+            public string Axis;
+            public float Min;
+            public float Max;
+            public float Default;
+        }
+        
+        List<ReferenceAxis> GetReferencePluginAxes(string bodyPart)
+        {
+            var axes = new List<ReferenceAxis>();
+            
+            switch (bodyPart.ToLower())
+            {
+                case "head":
+                    axes.Add(new ReferenceAxis { Label = "Fwd ↔ Back", Axis = "X", Min = -35f, Max = 45f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Turn Left ↔ Right", Axis = "Y", Min = -35f, Max = 35f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Lean Left ↔ Right", Axis = "Z", Min = -30f, Max = 30f, Default = 0f });
+                    break;
+                case "arm":
+                    axes.Add(new ReferenceAxis { Label = "Down ↔ Up", Axis = "X", Min = -75f, Max = 30f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Forw ↔ Back", Axis = "Y", Min = -80f, Max = 80f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist In ↔ Out", Axis = "Z", Min = -70f, Max = 70f, Default = 0f });
+                    break;
+                case "elbow":
+                    axes.Add(new ReferenceAxis { Label = "Bend ↔ Straight", Axis = "X", Min = -130f, Max = 20f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Y", Axis = "Y", Min = -65f, Max = 65f, Default = 0f });
+                    break;
+                case "hand":
+                    axes.Add(new ReferenceAxis { Label = "In ↔ Out", Axis = "X", Min = -80f, Max = 80f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Y", Axis = "Y", Min = -40f, Max = 40f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Z", Axis = "Z", Min = -40f, Max = 40f, Default = 0f });
+                    break;
+                case "thigh":
+                    axes.Add(new ReferenceAxis { Label = "Back ↔ Forw", Axis = "X", Min = -25f, Max = 100f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Toes In ↔ Out", Axis = "Y", Min = -75f, Max = 75f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Straight ↔ Spread", Axis = "Z", Min = -85f, Max = 85f, Default = 0f });
+                    break;
+                case "foot":
+                    axes.Add(new ReferenceAxis { Label = "Toe ↔ Heal", Axis = "X", Min = -65f, Max = 40f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Toes In ↔ Out", Axis = "Y", Min = -20f, Max = 20f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Lean In ↔ Out", Axis = "Z", Min = -20f, Max = 20f, Default = 0f });
+                    break;
+                case "collar":
+                    axes.Add(new ReferenceAxis { Label = "Down ↔ Up", Axis = "X", Min = -15f, Max = 50f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Forw ↔ Back", Axis = "Y", Min = -20f, Max = 20f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Rotate", Axis = "Z", Min = -15f, Max = 15f, Default = 0f });
+                    break;
+                case "spine":
+                case "chest":
+                    axes.Add(new ReferenceAxis { Label = "Forw ↔ Back", Axis = "X", Min = -50f, Max = 50f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Right↔Left", Axis = "Y", Min = -40f, Max = 40f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Z", Axis = "Z", Min = -40f, Max = 40f, Default = 0f });
+                    break;
+                case "pelvis":
+                    axes.Add(new ReferenceAxis { Label = "Forw ↔ Back", Axis = "X", Min = -30f, Max = 15f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Right↔Left", Axis = "Y", Min = -15f, Max = 15f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Z", Axis = "Z", Min = -10f, Max = 10f, Default = 0f });
+                    break;
+                case "abd l":
+                case "abd h":
+                    axes.Add(new ReferenceAxis { Label = "Forw ↔ Back", Axis = "X", Min = -30f, Max = 20f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Right↔Left", Axis = "Y", Min = -15f, Max = 15f, Default = 0f });
+                    axes.Add(new ReferenceAxis { Label = "Twist Z", Axis = "Z", Min = -10f, Max = 10f, Default = 0f });
+                    break;
+                // 单轴控制
+                case "knee":
+                    axes.Add(new ReferenceAxis { Label = "Bend ↔ Straight", Axis = "X", Min = -150f, Max = 11f, Default = 0f });
+                    break;
+                case "toe":
+                case "toes":
+                    axes.Add(new ReferenceAxis { Label = "Down ↔ Up", Axis = "X", Min = -65f, Max = 75f, Default = 0f });
+                    break;
+            }
+            
+            return axes;
+        }
+        
+        void OnAxisSliderChanged(string bodyPart, string axisLabel, string axis, float sliderValue)
+        {
+            try
+            {
+                // 获取当前总倍数
+                float totalMultiplier = _totalMultiplier?.val ?? 1.0f;
+                
+                // 基于已知工作的ApplyJointControl逻辑，创建轴向特定的JointMapping
+                var jointMappings = GetJointMappings(bodyPart);
+                if (jointMappings != null && jointMappings.Count > 0)
+                {
+                    // 为每个关节映射设置轴向和值
+                    foreach (var mapping in jointMappings)
+                    {
+                        // 临时修改映射的轴向以应用特定轴向控制
+                        var originalAxis = mapping.primaryAxis;
+                        mapping.primaryAxis = axis;
+                        
+                        // 使用已知工作的ApplyJointControl逻辑
+                        ApplyJointControl(bodyPart, "AxisBend", sliderValue, totalMultiplier, mapping);
+                        
+                        // 恢复原始轴向
+                        mapping.primaryAxis = originalAxis;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogError(ex, $"OnAxisSliderChanged: {bodyPart} {axisLabel}");
+            }
         }
         
         void OnSliderChanged(string bodyPart, string controlType, float sliderValue)

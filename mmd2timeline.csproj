@@ -282,6 +282,7 @@
     <Compile Include="src\Player\Trigger\TriggerEventHelper.cs" />
     <Compile Include="src\Player\Trigger\TriggerEventType.cs" />
     <Compile Include="src\Utils\Config.cs" />
+    <Compile Include="src\Utils\BodyPartControlMapping.cs" />
     <Compile Include="src\Utils\Enums.cs" />
     <Compile Include="src\Utils\Lang.cs" />
     <Compile Include="src\LibMmd\Motion\VmdVisibleIK.cs" />
