@@ -800,10 +800,6 @@ namespace mmd2timeline
                 return;
             }
 
-            // 右侧暂不需要数值输入框，隐藏它
-            bool prevHide = MacGruber.Utils.HideSliderNumericInput;
-            MacGruber.Utils.HideSliderNumericInput = true;
-
             // 使用新的身体部位控制映射
             var bodyPartMapping = BodyPartControlMapping.GetBodyPartMapping();
             var mappingKey = GetBodyPartMappingKey(bodyPart);
@@ -852,9 +848,6 @@ namespace mmd2timeline
             _sliderElements.Add(finalSpacer);
 
             _bodyPartSliders[bodyPart] = sliders;
-
-            // 恢复全局设置（避免影响其他页面）
-            MacGruber.Utils.HideSliderNumericInput = prevHide;
         }
         
         // 映射UI显示名称到内部控制键
@@ -1014,9 +1007,13 @@ namespace mmd2timeline
                     var controller = person.GetStorableByID(controllerName) as FreeControllerV3;
                     if (controller == null) continue;
 
-                    // 关键：使用倍数调节刚度，而不是放大角度
+                    // 获取当前Strength值
+                    float strengthValue = GetCurrentStrengthValue(bodyPartKey);
+                    
+                    // 关键：使用倍数和强度共同调节刚度，而不是放大角度
                     float baseStiffness = 200f;
-                    float spring = Mathf.Clamp(baseStiffness * Mathf.Max(0.1f, multiplier), 50f, 1500f);
+                    float combinedMultiplier = Mathf.Max(0.1f, multiplier * (strengthValue / 50f)); // 50f是默认强度值
+                    float spring = Mathf.Clamp(baseStiffness * combinedMultiplier, 50f, 2000f);
                     controller.jointRotationDriveSpring = spring;
                     controller.jointRotationDriveMaxForce = spring;
                     controller.jointRotationDriveDamper = 1f;
@@ -1041,6 +1038,31 @@ namespace mmd2timeline
             catch (Exception ex)
             {
                 LogUtil.LogError(ex, $"ApplyDirectJointControl: {bodyPartKey} {axis}");
+            }
+        }
+        
+        // 获取指定身体部位的当前Strength值
+        float GetCurrentStrengthValue(string bodyPart)
+        {
+            try
+            {
+                if (_bodyPartSliders.ContainsKey(bodyPart))
+                {
+                    var sliders = _bodyPartSliders[bodyPart];
+                    var strengthSlider = sliders.FirstOrDefault(s => s.name.Contains("Strength"));
+                    if (strengthSlider != null)
+                    {
+                        return strengthSlider.val;
+                    }
+                }
+                
+                // 如果找不到，返回默认值
+                return 50f;
+            }
+            catch (Exception ex)
+            {
+                LogUtil.LogError(ex, $"GetCurrentStrengthValue: {bodyPart}");
+                return 50f;
             }
         }
         
@@ -1210,6 +1232,16 @@ namespace mmd2timeline
                 {
                     // Strength控制：使用新的直接控制方法
                     ApplyStrengthDirectly(bodyPart, sliderValue, totalMultiplier);
+                    
+                    // 对称控制逻辑 - 也应用于Strength
+                    if (_symmetricControl?.val == true)
+                    {
+                        var symmetricPart = GetSymmetricBodyPart(bodyPart);
+                        if (!string.IsNullOrEmpty(symmetricPart))
+                        {
+                            ApplyStrengthDirectly(symmetricPart, sliderValue, totalMultiplier);
+                        }
+                    }
                 }
                 else
                 {

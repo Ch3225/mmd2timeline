@@ -141,7 +141,7 @@ namespace mmd2timeline
             
             // Right Knee - 1 axis
             var rShin = new BodyPartControls("Right Knee");
-            rShin.AddAxis("Bend ↔ Straight", "X", -150f, 11f, 0f, -1);  // X轴镜像
+            rShin.AddAxis("Bend ↔ Straight", "X", -150f, 11f, 0f, 1);   // X轴不镜像，膝盖弯曲方向相同
             mapping["R.Knee"] = rShin;
             
             // Left Foot - 3 axes
